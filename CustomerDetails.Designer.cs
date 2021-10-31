@@ -43,6 +43,7 @@ namespace FlightManager
             this.customerPhoneNr = new System.Windows.Forms.TextBox();
             this.customerDatePicker = new System.Windows.Forms.DateTimePicker();
             this.CustomerDetailsSaveButton = new System.Windows.Forms.Button();
+            this.customerUpdateButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // customerDetailsLabel
@@ -160,18 +161,30 @@ namespace FlightManager
             // 
             // CustomerDetailsSaveButton
             // 
-            this.CustomerDetailsSaveButton.Location = new System.Drawing.Point(288, 498);
+            this.CustomerDetailsSaveButton.Location = new System.Drawing.Point(198, 498);
             this.CustomerDetailsSaveButton.Name = "CustomerDetailsSaveButton";
             this.CustomerDetailsSaveButton.Size = new System.Drawing.Size(183, 45);
             this.CustomerDetailsSaveButton.TabIndex = 15;
             this.CustomerDetailsSaveButton.Text = "Save";
             this.CustomerDetailsSaveButton.UseVisualStyleBackColor = true;
+            this.CustomerDetailsSaveButton.Click += new System.EventHandler(this.CustomerDetailsSaveButton_Click);
+            // 
+            // customerUpdateButton
+            // 
+            this.customerUpdateButton.Location = new System.Drawing.Point(454, 498);
+            this.customerUpdateButton.Name = "customerUpdateButton";
+            this.customerUpdateButton.Size = new System.Drawing.Size(182, 45);
+            this.customerUpdateButton.TabIndex = 16;
+            this.customerUpdateButton.Text = "Update";
+            this.customerUpdateButton.UseVisualStyleBackColor = true;
+            this.customerUpdateButton.Click += new System.EventHandler(this.customerUpdateButton_Click);
             // 
             // CustomerDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(782, 604);
+            this.Controls.Add(this.customerUpdateButton);
             this.Controls.Add(this.CustomerDetailsSaveButton);
             this.Controls.Add(this.customerDatePicker);
             this.Controls.Add(this.customerPhoneNr);
@@ -209,5 +222,6 @@ namespace FlightManager
         private System.Windows.Forms.TextBox customerPhoneNr;
         private System.Windows.Forms.DateTimePicker customerDatePicker;
         private System.Windows.Forms.Button CustomerDetailsSaveButton;
+        private System.Windows.Forms.Button customerUpdateButton;
     }
 }
