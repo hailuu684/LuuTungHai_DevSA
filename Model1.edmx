@@ -13,6 +13,20 @@
           <Property Name="Username" Type="nvarchar" MaxLength="50" />
           <Property Name="Password" Type="nvarchar" MaxLength="50" />
         </EntityType>
+        <EntityType Name="Flight_details_db">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FlightNumber" Type="nvarchar" MaxLength="50" />
+          <Property Name="DepartureAirport" Type="nvarchar" MaxLength="3" />
+          <Property Name="ArrivalAirport" Type="nvarchar" MaxLength="3" />
+          <Property Name="DepartureDateTime" Type="datetime" />
+          <Property Name="ArrivalDateTime" Type="datetime" />
+          <Property Name="FlightDuration" Type="time" Precision="7" />
+          <Property Name="StandardPrice" Type="float" />
+          <Property Name="TotalCapacity" Type="int" />
+        </EntityType>
         <EntityType Name="Personal_Info">
           <Key>
             <PropertyRef Name="Id" />
@@ -27,6 +41,7 @@
         </EntityType>
         <EntityContainer Name="databaseModelStoreContainer">
           <EntitySet Name="admin" EntityType="Self.admin" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Flight_details_db" EntityType="Self.Flight_details_db" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Personal_Info" EntityType="Self.Personal_Info" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
       </Schema></edmx:StorageModels>
@@ -44,6 +59,7 @@
         <EntityContainer Name="databaseEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="admins" EntityType="Self.admin" />
           <EntitySet Name="Personal_Info" EntityType="databaseModel.Personal_Info" />
+          <EntitySet Name="Flight_details_db" EntityType="databaseModel.Flight_details_db" />
         </EntityContainer>
         <EntityType Name="Personal_Info">
           <Key>
@@ -56,6 +72,20 @@
           <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Sex" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="DocumentNr" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Flight_details_db">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FlightNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DepartureAirport" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="ArrivalAirport" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="DepartureDateTime" Type="DateTime" Precision="3" />
+          <Property Name="ArrivalDateTime" Type="DateTime" Precision="3" />
+          <Property Name="FlightDuration" Type="Time" Precision="7" />
+          <Property Name="StandardPrice" Type="Double" />
+          <Property Name="TotalCapacity" Type="Int32" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -81,6 +111,21 @@
                 <ScalarProperty Name="PhoneNr" ColumnName="PhoneNr" />
                 <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
                 <ScalarProperty Name="FullName" ColumnName="FullName" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Flight_details_db">
+            <EntityTypeMapping TypeName="databaseModel.Flight_details_db">
+              <MappingFragment StoreEntitySet="Flight_details_db">
+                <ScalarProperty Name="TotalCapacity" ColumnName="TotalCapacity" />
+                <ScalarProperty Name="StandardPrice" ColumnName="StandardPrice" />
+                <ScalarProperty Name="FlightDuration" ColumnName="FlightDuration" />
+                <ScalarProperty Name="ArrivalDateTime" ColumnName="ArrivalDateTime" />
+                <ScalarProperty Name="DepartureDateTime" ColumnName="DepartureDateTime" />
+                <ScalarProperty Name="ArrivalAirport" ColumnName="ArrivalAirport" />
+                <ScalarProperty Name="DepartureAirport" ColumnName="DepartureAirport" />
+                <ScalarProperty Name="FlightNumber" ColumnName="FlightNumber" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>

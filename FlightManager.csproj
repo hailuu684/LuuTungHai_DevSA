@@ -85,6 +85,9 @@
     <Compile Include="FlightInfo.Designer.cs">
       <DependentUpon>FlightInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Flight_details_db.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
