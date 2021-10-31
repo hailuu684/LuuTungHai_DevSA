@@ -26,5 +26,6 @@ namespace FlightManager
         }
     
         public virtual DbSet<admin> admins { get; set; }
+        public virtual DbSet<Personal_Info> Personal_Info { get; set; }
     }
 }
