@@ -42,12 +42,12 @@ namespace FlightManager
             this.customerSex = new System.Windows.Forms.TextBox();
             this.customerDocNr = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.priceBox = new System.Windows.Forms.TextBox();
             this.customerDatePicker = new System.Windows.Forms.DateTimePicker();
             this.bookButton = new System.Windows.Forms.Button();
+            this.luggageNr = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -170,14 +170,6 @@ namespace FlightManager
             this.label8.TabIndex = 13;
             this.label8.Text = "Number of luggage";
             // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(293, 365);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(153, 32);
-            this.comboBox1.TabIndex = 14;
-            // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(187, 434);
@@ -186,6 +178,7 @@ namespace FlightManager
             this.button1.TabIndex = 15;
             this.button1.Text = "Calculate price";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label9
             // 
@@ -223,17 +216,24 @@ namespace FlightManager
             this.bookButton.UseVisualStyleBackColor = true;
             this.bookButton.Click += new System.EventHandler(this.button2_Click);
             // 
+            // luggageNr
+            // 
+            this.luggageNr.Location = new System.Drawing.Point(293, 368);
+            this.luggageNr.Name = "luggageNr";
+            this.luggageNr.Size = new System.Drawing.Size(139, 29);
+            this.luggageNr.TabIndex = 21;
+            // 
             // BookingForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(621, 689);
+            this.Controls.Add(this.luggageNr);
             this.Controls.Add(this.bookButton);
             this.Controls.Add(this.customerDatePicker);
             this.Controls.Add(this.priceBox);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.customerDocNr);
             this.Controls.Add(this.customerSex);
@@ -270,11 +270,11 @@ namespace FlightManager
         private System.Windows.Forms.TextBox customerSex;
         private System.Windows.Forms.TextBox customerDocNr;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox priceBox;
         private System.Windows.Forms.DateTimePicker customerDatePicker;
         private System.Windows.Forms.Button bookButton;
+        private System.Windows.Forms.TextBox luggageNr;
     }
 }

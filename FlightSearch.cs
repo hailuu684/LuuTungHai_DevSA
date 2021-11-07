@@ -59,6 +59,8 @@ namespace FlightManager
         {
             int id = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells[0].Value);
 
+            Globals.FlightID = id;
+
             var myForm = new BookingForm();
             myForm.Show();
         }

@@ -9,6 +9,7 @@ namespace FlightManager
     public static class Globals
     {
         public static int PersonalID;
+        public static int FlightID;
     }
 
     static class Program

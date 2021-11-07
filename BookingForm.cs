@@ -23,7 +23,6 @@ namespace FlightManager
             db = new databaseEntities();
             Personal_Info customer = db.Personal_Info.Where(a => a.Id == id).FirstOrDefault();
             
-
             customerFullName.Text = customer.FullName;
             customerDatePicker.Value = (DateTime)customer.DateOfBirth;
             customerSex.Text = customer.Sex;
@@ -70,6 +69,33 @@ namespace FlightManager
         private void button2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            int nrOfLuggage;
+            try
+            {
+                nrOfLuggage = Convert.ToInt32(luggageNr.Text);
+            }
+            catch
+            {
+                MessageBox.Show("Input only numbers");
+                return;
+            }
+            
+            if (nrOfLuggage > 10) // TODO: if VIP can do 10, otherwise 3 or something
+            {
+                MessageBox.Show("Choose less luggage please");
+                return;
+            }
+
+            int flightId = Globals.FlightID;
+
+            Flight_details_db currentFlight = db.Flight_details_db.Where(a => a.Id.Equals(flightId)).FirstOrDefault();
+
+            double currentPrice = Convert.ToDouble(currentFlight.StandardPrice) + nrOfLuggage*100;
+            priceBox.Text = Convert.ToString(currentPrice);
         }
     }
 }
