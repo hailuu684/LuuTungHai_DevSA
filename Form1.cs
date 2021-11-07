@@ -23,14 +23,15 @@ namespace FlightManager
 
             if (usrtxt.Text != string.Empty && usrpwtxt.Text != string.Empty)
             {
-                var user = db.admins.Where(a => a.Username.Equals(usrtxt.Text)).SingleOrDefault();
+                var user = db.Personal_Info.Where(a => a.Username.Equals(usrtxt.Text)).SingleOrDefault();
                 if (user != null)
                 {
                     if (user.Password.Equals(usrpwtxt.Text))
                     {
                         MessageBox.Show("Password is correct");
+                        Globals.PersonalID = user.Id;
 
-                        var myForm = new StoreCustomers();
+                        var myForm = new FlightSearch();
                         myForm.Show();
                         this.Hide();
                     }

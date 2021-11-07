@@ -21,5 +21,7 @@ namespace FlightManager
         public string Email { get; set; }
         public string Sex { get; set; }
         public string DocumentNr { get; set; }
+        public string Username { get; set; }
+        public string Password { get; set; }
     }
 }

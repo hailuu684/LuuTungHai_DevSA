@@ -38,6 +38,8 @@
           <Property Name="Email" Type="nvarchar" MaxLength="50" />
           <Property Name="Sex" Type="nvarchar" MaxLength="50" />
           <Property Name="DocumentNr" Type="nvarchar" MaxLength="50" />
+          <Property Name="Username" Type="nvarchar" MaxLength="50" />
+          <Property Name="Password" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <EntityContainer Name="databaseModelStoreContainer">
           <EntitySet Name="admin" EntityType="Self.admin" Schema="dbo" store:Type="Tables" />
@@ -72,6 +74,8 @@
           <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Sex" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="DocumentNr" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Username" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="Flight_details_db">
           <Key>
@@ -105,6 +109,8 @@
           <EntitySetMapping Name="Personal_Info">
             <EntityTypeMapping TypeName="databaseModel.Personal_Info">
               <MappingFragment StoreEntitySet="Personal_Info">
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Username" ColumnName="Username" />
                 <ScalarProperty Name="DocumentNr" ColumnName="DocumentNr" />
                 <ScalarProperty Name="Sex" ColumnName="Sex" />
                 <ScalarProperty Name="Email" ColumnName="Email" />

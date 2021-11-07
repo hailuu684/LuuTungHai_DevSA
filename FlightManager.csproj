@@ -73,6 +73,12 @@
     <Compile Include="admin.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="BookingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BookingForm.Designer.cs">
+      <DependentUpon>BookingForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="CustomerDetails.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,6 +90,12 @@
     </Compile>
     <Compile Include="FlightInfo.Designer.cs">
       <DependentUpon>FlightInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FlightSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FlightSearch.Designer.cs">
+      <DependentUpon>FlightSearch.cs</DependentUpon>
     </Compile>
     <Compile Include="Flight_details_db.cs">
       <DependentUpon>Model1.tt</DependentUpon>
@@ -120,11 +132,17 @@
     <Compile Include="StoreCustomers.Designer.cs">
       <DependentUpon>StoreCustomers.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="BookingForm.resx">
+      <DependentUpon>BookingForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CustomerDetails.resx">
       <DependentUpon>CustomerDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FlightInfo.resx">
       <DependentUpon>FlightInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FlightSearch.resx">
+      <DependentUpon>FlightSearch.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

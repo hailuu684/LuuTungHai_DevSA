@@ -6,6 +6,11 @@ using System.Windows.Forms;
 
 namespace FlightManager
 {
+    public static class Globals
+    {
+        public static int PersonalID;
+    }
+
     static class Program
     {
         /// <summary>
@@ -16,7 +21,7 @@ namespace FlightManager
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FlightInfo());
+            Application.Run(new Form1());
         }
     }
 }
