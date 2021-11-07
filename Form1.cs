@@ -20,20 +20,34 @@ namespace FlightManager
         private void button1_Click(object sender, EventArgs e)
         {
             databaseEntities db = new databaseEntities();
+            bool isAdmin = false;
 
             if (usrtxt.Text != string.Empty && usrpwtxt.Text != string.Empty)
             {
                 var user = db.Personal_Info.Where(a => a.Username.Equals(usrtxt.Text)).SingleOrDefault();
                 if (user != null)
                 {
+                    if (user.Username == "admin")
+                        isAdmin = true;
+
                     if (user.Password.Equals(usrpwtxt.Text))
                     {
                         MessageBox.Show("Password is correct");
                         Globals.PersonalID = user.Id;
 
-                        var myForm = new FlightSearch();
-                        myForm.Show();
-                        this.Hide();
+                        if (!isAdmin)
+                        {
+                            var myForm = new FlightSearch();
+                            myForm.Show();
+                            this.Hide();
+                        }
+                        else
+                        {
+                            var myForm = new FlightInfo();
+                            myForm.Show();
+                            this.Hide();
+                        }
+                        
                     }
                     else
                     {
