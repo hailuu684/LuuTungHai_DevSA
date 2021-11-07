@@ -23,5 +23,6 @@ namespace FlightManager
         public Nullable<System.TimeSpan> FlightDuration { get; set; }
         public Nullable<double> StandardPrice { get; set; }
         public Nullable<int> TotalCapacity { get; set; }
+        public Nullable<int> AvailableSeats { get; set; }
     }
 }

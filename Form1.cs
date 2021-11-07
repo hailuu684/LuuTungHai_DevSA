@@ -37,12 +37,14 @@ namespace FlightManager
 
                         if (!isAdmin)
                         {
+                            // TODO: add some dashboard with buttons for different things
                             var myForm = new FlightSearch();
                             myForm.Show();
                             this.Hide();
                         }
                         else
                         {
+                            // TODO: add some dashboard with buttons for different things
                             var myForm = new FlightInfo();
                             myForm.Show();
                             this.Hide();

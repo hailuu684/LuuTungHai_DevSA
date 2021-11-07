@@ -5,14 +5,6 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
     <Schema Namespace="databaseModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-        <EntityType Name="admin">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Username" Type="nvarchar" MaxLength="50" />
-          <Property Name="Password" Type="nvarchar" MaxLength="50" />
-        </EntityType>
         <EntityType Name="Flight_details_db">
           <Key>
             <PropertyRef Name="Id" />
@@ -26,6 +18,7 @@
           <Property Name="FlightDuration" Type="time" Precision="7" />
           <Property Name="StandardPrice" Type="float" />
           <Property Name="TotalCapacity" Type="int" />
+          <Property Name="AvailableSeats" Type="int" />
         </EntityType>
         <EntityType Name="Personal_Info">
           <Key>
@@ -42,7 +35,6 @@
           <Property Name="Password" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <EntityContainer Name="databaseModelStoreContainer">
-          <EntitySet Name="admin" EntityType="Self.admin" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Flight_details_db" EntityType="Self.Flight_details_db" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Personal_Info" EntityType="Self.Personal_Info" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
@@ -50,16 +42,7 @@
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="databaseModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-        <EntityType Name="admin">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Username" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-        </EntityType>
         <EntityContainer Name="databaseEntities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="admins" EntityType="Self.admin" />
           <EntitySet Name="Personal_Info" EntityType="databaseModel.Personal_Info" />
           <EntitySet Name="Flight_details_db" EntityType="databaseModel.Flight_details_db" />
         </EntityContainer>
@@ -90,6 +73,7 @@
           <Property Name="FlightDuration" Type="Time" Precision="7" />
           <Property Name="StandardPrice" Type="Double" />
           <Property Name="TotalCapacity" Type="Int32" />
+          <Property Name="AvailableSeats" Type="Int32" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -97,15 +81,6 @@
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="databaseModelStoreContainer" CdmEntityContainer="databaseEntities">
-          <EntitySetMapping Name="admins">
-            <EntityTypeMapping TypeName="databaseModel.admin">
-              <MappingFragment StoreEntitySet="admin">
-                <ScalarProperty Name="Id" ColumnName="Id" />
-                <ScalarProperty Name="Username" ColumnName="Username" />
-                <ScalarProperty Name="Password" ColumnName="Password" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="Personal_Info">
             <EntityTypeMapping TypeName="databaseModel.Personal_Info">
               <MappingFragment StoreEntitySet="Personal_Info">
@@ -124,6 +99,7 @@
           <EntitySetMapping Name="Flight_details_db">
             <EntityTypeMapping TypeName="databaseModel.Flight_details_db">
               <MappingFragment StoreEntitySet="Flight_details_db">
+                <ScalarProperty Name="AvailableSeats" ColumnName="AvailableSeats" />
                 <ScalarProperty Name="TotalCapacity" ColumnName="TotalCapacity" />
                 <ScalarProperty Name="StandardPrice" ColumnName="StandardPrice" />
                 <ScalarProperty Name="FlightDuration" ColumnName="FlightDuration" />

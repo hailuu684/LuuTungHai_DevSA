@@ -5,7 +5,6 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="46773331202b42e7a7cf08d4da53e060" Name="Diagram1">
-        <EntityTypeShape EntityType="databaseModel.admin" Width="1.5" PointX="1" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="databaseModel.Personal_Info" Width="1.875" PointX="3.375" PointY="0.75" />
         <EntityTypeShape EntityType="databaseModel.Flight_details_db" Width="1.5" PointX="6.125" PointY="0.625" />
       </Diagram>

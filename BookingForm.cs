@@ -68,7 +68,18 @@ namespace FlightManager
 
         private void button2_Click(object sender, EventArgs e)
         {
+            int flightId = Globals.FlightID;
 
+            Flight_details_db currentFlight = db.Flight_details_db.Where(a => a.Id.Equals(flightId)).FirstOrDefault();
+            if (currentFlight.AvailableSeats <= 0)
+            {
+                MessageBox.Show("No available seats on this flight");
+                return;
+            }
+
+            currentFlight.AvailableSeats--;
+            db.SaveChanges();
+            MessageBox.Show("Flight booked successfully, there are " + currentFlight.AvailableSeats + " seats left");
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -95,7 +106,7 @@ namespace FlightManager
             Flight_details_db currentFlight = db.Flight_details_db.Where(a => a.Id.Equals(flightId)).FirstOrDefault();
 
             double currentPrice = Convert.ToDouble(currentFlight.StandardPrice) + nrOfLuggage*100;
-            priceBox.Text = Convert.ToString(currentPrice);
+            priceBox.Text = "$ " + Convert.ToString(currentPrice); // TODO: currency?
         }
     }
 }
