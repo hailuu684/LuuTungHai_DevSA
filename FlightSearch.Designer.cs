@@ -107,7 +107,7 @@ namespace FlightManager
             this.Controls.Add(this.sourceCombo);
             this.Controls.Add(this.label1);
             this.Name = "FlightSearch";
-            this.Text = "FlightSearch";
+            this.Text = "Flight search";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="FlightManager.BookingForm" Collapsed="true">
+    <Position X="6.5" Y="4.5" Width="2.75" />
+    <Members>
+      <Field Name="airportTransferCheckbox" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>IAIEBBAJACAQEBCAACCgAAACEABIYEAAAGAAAAgAQ0A=</HashCode>
+      <FileName>BookingForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FlightManager.CustomerDetails" Collapsed="true">
+    <Position X="0.5" Y="7" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>IBIEAAQAACAQABAAAADAQAACAAACAEAAAAAAAAAAQwA=</HashCode>
+      <FileName>CustomerDetails.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FlightManager.FlightInfo" Collapsed="true">
+    <Position X="6.25" Y="4.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAUEACARABAAAACAAAACAAAAQAAgAAAAQAAAACA=</HashCode>
+      <FileName>FlightInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FlightManager.FlightSearch" Collapsed="true">
+    <Position X="6.25" Y="4.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAACAACAACAUQBAAAACAAAACAAgIAAAAAEAAAAAAEAA=</HashCode>
+      <FileName>FlightSearch.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FlightManager.LoginForm" Collapsed="true">
+    <Position X="7.25" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAECAAABAAAADAAAASAAAIAAAAAEAAAAAAAAA=</HashCode>
+      <FileName>LoginForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FlightManager.databaseEntities" Collapsed="true">
+    <Position X="6" Y="4" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAAAAAAAAAQAAAEAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model1.Context.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FlightManager.Flight_details_db">
+    <Position X="2.25" Y="0.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>QAACAABAIAAAAAAAAgIAAAAIECAAAAAgAAAAAAAAAAA=</HashCode>
+      <FileName>Flight_details_db.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FlightManager.Personal_Info">
+    <Position X="0.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAACIABIAAAQAAAAAAAAAQgAACAAAAAAAAAgA=</HashCode>
+      <FileName>Personal_Info.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FlightManager.Globals">
+    <Position X="7.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAEAAAAAAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FlightManager.Program" Collapsed="true">
+    <Position X="7.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FlightManager.StoreCustomers" Collapsed="true">
+    <Position X="0.5" Y="6.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAACAEABAAAACAAAASAAgAAAAAEAAAAAAAAAA=</HashCode>
+      <FileName>StoreCustomers.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FlightManager.Properties.Resources" Collapsed="true">
+    <Position X="7" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FlightManager.Properties.Settings" Collapsed="true">
+    <Position X="7" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

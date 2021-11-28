@@ -12,6 +12,22 @@ namespace FlightManager
         public static int FlightID;
     }
 
+    public class DataBaseSingleton
+    {
+        private static databaseEntities db;
+
+        private DataBaseSingleton()
+        { }
+
+        public static databaseEntities GetDataBase()
+        {
+            if (db == null)
+                db = new databaseEntities();
+
+            return db;
+        }
+    }
+
     static class Program
     {
         /// <summary>
@@ -22,7 +38,7 @@ namespace FlightManager
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new LoginForm());
         }
     }
 }

@@ -200,7 +200,7 @@ namespace FlightManager
             this.Controls.Add(this.label1);
             this.Controls.Add(this.customerDetailsLabel);
             this.Name = "CustomerDetails";
-            this.Text = "CustomerDetails";
+            this.Text = "Customer details";
             this.ResumeLayout(false);
             this.PerformLayout();
 

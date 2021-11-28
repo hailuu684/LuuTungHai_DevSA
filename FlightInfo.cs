@@ -17,7 +17,7 @@ namespace FlightManager
         public FlightInfo()
         {
             InitializeComponent();
-            db = new databaseEntities();
+            db = DataBaseSingleton.GetDataBase();
         }
 
         private void label8_Click(object sender, EventArgs e)
@@ -28,6 +28,7 @@ namespace FlightManager
         private void addFlightButton_Click(object sender, EventArgs e)
         {
             Flight_details_db flight_db = new Flight_details_db();
+
             flight_db.FlightNumber = flightNumberTextbox.Text;
             flight_db.DepartureAirport = departureAirportTextbox.Text;
             flight_db.ArrivalAirport = destinationAirportTextbox.Text;

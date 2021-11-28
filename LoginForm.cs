@@ -10,18 +10,19 @@ using System.Windows.Forms;
 
 namespace FlightManager
 {
-    public partial class Form1 : Form
+    public partial class LoginForm : Form
     {
-        public Form1()
+        public LoginForm()
         {
             InitializeComponent();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            databaseEntities db = new databaseEntities();
+            databaseEntities db = DataBaseSingleton.GetDataBase();
+            
             bool isAdmin = false;
-
+            
             if (usrtxt.Text != string.Empty && usrpwtxt.Text != string.Empty)
             {
                 var user = db.Personal_Info.Where(a => a.Username.Equals(usrtxt.Text)).SingleOrDefault();
@@ -32,7 +33,6 @@ namespace FlightManager
 
                     if (user.Password.Equals(usrpwtxt.Text))
                     {
-                        MessageBox.Show("Password is correct");
                         Globals.PersonalID = user.Id;
 
                         if (!isAdmin)

@@ -19,14 +19,14 @@ namespace FlightManager
 
         private void StoreCustomers_Load(object sender, EventArgs e)
         {
-            databaseEntities db = new databaseEntities();
+            databaseEntities db = DataBaseSingleton.GetDataBase();
             var items = db.Personal_Info.ToList();
             dataGridView1.DataSource = items;
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            databaseEntities db = new databaseEntities();
+            databaseEntities db = DataBaseSingleton.GetDataBase();
             var items = db.Personal_Info.Where(a => a.FullName.Equals(textBox1.Text)).ToList();
             dataGridView1.DataSource = items;
         }

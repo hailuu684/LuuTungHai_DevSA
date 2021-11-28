@@ -29,12 +29,14 @@ namespace FlightManager
                 BookingFormTitle.Text = "VIP customer data";
                 airportTransferLabel.Visible = true;
                 airportTransferCheckbox.Visible = true;
+                vipPicture.Visible = true;
             }
             else
             {
                 BookingFormTitle.Text = "Customer data";
                 airportTransferLabel.Visible = false;
                 airportTransferCheckbox.Visible = false;
+                vipPicture.Visible = false;
             }
             
             customerFullName.Text = customer.FullName;

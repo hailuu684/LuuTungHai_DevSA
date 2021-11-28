@@ -29,6 +29,7 @@ namespace FlightManager
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BookingForm));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -50,6 +51,8 @@ namespace FlightManager
             this.luggageNr = new System.Windows.Forms.TextBox();
             this.airportTransferCheckbox = new System.Windows.Forms.CheckBox();
             this.airportTransferLabel = new System.Windows.Forms.Label();
+            this.vipPicture = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.vipPicture)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -244,11 +247,22 @@ namespace FlightManager
             this.airportTransferLabel.TabIndex = 23;
             this.airportTransferLabel.Text = "Airport transfer";
             // 
+            // vipPicture
+            // 
+            this.vipPicture.Image = ((System.Drawing.Image)(resources.GetObject("vipPicture.Image")));
+            this.vipPicture.Location = new System.Drawing.Point(529, 660);
+            this.vipPicture.Name = "vipPicture";
+            this.vipPicture.Size = new System.Drawing.Size(80, 59);
+            this.vipPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.vipPicture.TabIndex = 24;
+            this.vipPicture.TabStop = false;
+            // 
             // BookingForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(621, 731);
+            this.Controls.Add(this.vipPicture);
             this.Controls.Add(this.airportTransferLabel);
             this.Controls.Add(this.airportTransferCheckbox);
             this.Controls.Add(this.luggageNr);
@@ -271,8 +285,9 @@ namespace FlightManager
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "BookingForm";
-            this.Text = "BookingForm";
+            this.Text = "Booking";
             this.Load += new System.EventHandler(this.BookingForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.vipPicture)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -301,5 +316,6 @@ namespace FlightManager
         private System.Windows.Forms.TextBox luggageNr;
         private System.Windows.Forms.CheckBox airportTransferCheckbox;
         private System.Windows.Forms.Label airportTransferLabel;
+        private System.Windows.Forms.PictureBox vipPicture;
     }
 }

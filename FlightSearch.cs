@@ -18,7 +18,7 @@ namespace FlightManager
         {
             InitializeComponent();
 
-            db = new databaseEntities();
+            db = DataBaseSingleton.GetDataBase();
 
             BindSource();
             BindDestination();
