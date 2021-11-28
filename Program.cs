@@ -6,6 +6,10 @@ using System.Windows.Forms;
 
 namespace FlightManager
 {
+    //TODO: - finish diagrams
+    //      - admin dashboard
+    //      - save bookings
+
     public static class Globals
     {
         public static int PersonalID;
