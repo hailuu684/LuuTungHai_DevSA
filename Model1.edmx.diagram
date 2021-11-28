@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="46773331202b42e7a7cf08d4da53e060" Name="Diagram1">
+        <EntityTypeShape EntityType="databaseModel.Personal_Info" Width="1.875" PointX="3.375" PointY="0.75" />
+        <EntityTypeShape EntityType="databaseModel.Flight_details_db" Width="1.5" PointX="6.125" PointY="0.625" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
