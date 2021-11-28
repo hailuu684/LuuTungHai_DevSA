@@ -71,5 +71,13 @@ namespace FlightManager
         {
 
         }
+
+        private void usrpwtxt_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                button1_Click(this, new EventArgs());
+            }
+        }
     }
 }

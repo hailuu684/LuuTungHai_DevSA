@@ -69,6 +69,7 @@ namespace FlightManager
             this.usrpwtxt.PasswordChar = '*';
             this.usrpwtxt.Size = new System.Drawing.Size(174, 29);
             this.usrpwtxt.TabIndex = 3;
+            this.usrpwtxt.KeyDown += new System.Windows.Forms.KeyEventHandler(this.usrpwtxt_KeyDown);
             // 
             // button1
             // 
