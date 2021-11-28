@@ -13,6 +13,7 @@ namespace FlightManager
     public partial class BookingForm : Form
     {
         databaseEntities db;
+        Personal_Info customer;
         static int id = 0;
 
         public BookingForm()
@@ -21,7 +22,20 @@ namespace FlightManager
             id = Globals.PersonalID;
 
             db = new databaseEntities();
-            Personal_Info customer = db.Personal_Info.Where(a => a.Id == id).FirstOrDefault();
+            customer = db.Personal_Info.Where(a => a.Id == id).FirstOrDefault();
+            
+            if (customer.VIP == true)
+            {
+                BookingFormTitle.Text = "VIP customer data";
+                airportTransferLabel.Visible = true;
+                airportTransferCheckbox.Visible = true;
+            }
+            else
+            {
+                BookingFormTitle.Text = "Customer data";
+                airportTransferLabel.Visible = false;
+                airportTransferCheckbox.Visible = false;
+            }
             
             customerFullName.Text = customer.FullName;
             customerDatePicker.Value = (DateTime)customer.DateOfBirth;
@@ -94,19 +108,34 @@ namespace FlightManager
                 MessageBox.Show("Input only numbers");
                 return;
             }
-            
-            if (nrOfLuggage > 10) // TODO: if VIP can do 10, otherwise 3 or something
+
+            if (customer.VIP == false)
             {
-                MessageBox.Show("Choose less luggage please");
-                return;
+                if (nrOfLuggage > 3)
+                {
+                    MessageBox.Show("Choose less luggage please");
+                    return;
+                }
+            }
+            else
+            {
+                if (nrOfLuggage > 10)
+                {
+                    MessageBox.Show("Choose less luggage please");
+                    return;
+                }
             }
 
             int flightId = Globals.FlightID;
 
             Flight_details_db currentFlight = db.Flight_details_db.Where(a => a.Id.Equals(flightId)).FirstOrDefault();
 
-            double currentPrice = Convert.ToDouble(currentFlight.StandardPrice) + nrOfLuggage*100;
-            priceBox.Text = "$ " + Convert.ToString(currentPrice); // TODO: currency?
+            double multiplier = 1;
+            if (customer.VIP == true)
+                multiplier = 0.8;
+
+            double currentPrice = (Convert.ToDouble(currentFlight.StandardPrice) + nrOfLuggage*100) * multiplier;
+            priceBox.Text = "$ " + Convert.ToString(currentPrice);
         }
     }
 }

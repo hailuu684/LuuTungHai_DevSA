@@ -23,5 +23,6 @@ namespace FlightManager
         public string DocumentNr { get; set; }
         public string Username { get; set; }
         public string Password { get; set; }
+        public Nullable<bool> VIP { get; set; }
     }
 }

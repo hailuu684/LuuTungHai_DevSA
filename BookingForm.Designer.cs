@@ -35,7 +35,7 @@ namespace FlightManager
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.BookingFormTitle = new System.Windows.Forms.Label();
             this.customerFullName = new System.Windows.Forms.TextBox();
             this.customerPhoneNr = new System.Windows.Forms.TextBox();
             this.customerEmail = new System.Windows.Forms.TextBox();
@@ -48,6 +48,8 @@ namespace FlightManager
             this.customerDatePicker = new System.Windows.Forms.DateTimePicker();
             this.bookButton = new System.Windows.Forms.Button();
             this.luggageNr = new System.Windows.Forms.TextBox();
+            this.airportTransferCheckbox = new System.Windows.Forms.CheckBox();
+            this.airportTransferLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -110,15 +112,15 @@ namespace FlightManager
             this.label6.TabIndex = 5;
             this.label6.Text = "Document number";
             // 
-            // label7
+            // BookingFormTitle
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(27, 20);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(245, 39);
-            this.label7.TabIndex = 6;
-            this.label7.Text = "Customer data";
+            this.BookingFormTitle.AutoSize = true;
+            this.BookingFormTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BookingFormTitle.Location = new System.Drawing.Point(27, 20);
+            this.BookingFormTitle.Name = "BookingFormTitle";
+            this.BookingFormTitle.Size = new System.Drawing.Size(245, 39);
+            this.BookingFormTitle.TabIndex = 6;
+            this.BookingFormTitle.Text = "Customer data";
             // 
             // customerFullName
             // 
@@ -172,7 +174,7 @@ namespace FlightManager
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(187, 434);
+            this.button1.Location = new System.Drawing.Point(187, 474);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(193, 40);
             this.button1.TabIndex = 15;
@@ -184,7 +186,7 @@ namespace FlightManager
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(129, 510);
+            this.label9.Location = new System.Drawing.Point(129, 550);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(80, 32);
             this.label9.TabIndex = 16;
@@ -193,7 +195,7 @@ namespace FlightManager
             // priceBox
             // 
             this.priceBox.Enabled = false;
-            this.priceBox.Location = new System.Drawing.Point(266, 510);
+            this.priceBox.Location = new System.Drawing.Point(266, 550);
             this.priceBox.Name = "priceBox";
             this.priceBox.Size = new System.Drawing.Size(180, 29);
             this.priceBox.TabIndex = 18;
@@ -208,7 +210,7 @@ namespace FlightManager
             // 
             // bookButton
             // 
-            this.bookButton.Location = new System.Drawing.Point(177, 604);
+            this.bookButton.Location = new System.Drawing.Point(177, 644);
             this.bookButton.Name = "bookButton";
             this.bookButton.Size = new System.Drawing.Size(255, 54);
             this.bookButton.TabIndex = 20;
@@ -223,11 +225,32 @@ namespace FlightManager
             this.luggageNr.Size = new System.Drawing.Size(139, 29);
             this.luggageNr.TabIndex = 21;
             // 
+            // airportTransferCheckbox
+            // 
+            this.airportTransferCheckbox.AutoSize = true;
+            this.airportTransferCheckbox.Location = new System.Drawing.Point(293, 424);
+            this.airportTransferCheckbox.Name = "airportTransferCheckbox";
+            this.airportTransferCheckbox.Size = new System.Drawing.Size(22, 21);
+            this.airportTransferCheckbox.TabIndex = 22;
+            this.airportTransferCheckbox.UseVisualStyleBackColor = true;
+            // 
+            // airportTransferLabel
+            // 
+            this.airportTransferLabel.AutoSize = true;
+            this.airportTransferLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.airportTransferLabel.Location = new System.Drawing.Point(29, 415);
+            this.airportTransferLabel.Name = "airportTransferLabel";
+            this.airportTransferLabel.Size = new System.Drawing.Size(183, 30);
+            this.airportTransferLabel.TabIndex = 23;
+            this.airportTransferLabel.Text = "Airport transfer";
+            // 
             // BookingForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(621, 689);
+            this.ClientSize = new System.Drawing.Size(621, 731);
+            this.Controls.Add(this.airportTransferLabel);
+            this.Controls.Add(this.airportTransferCheckbox);
             this.Controls.Add(this.luggageNr);
             this.Controls.Add(this.bookButton);
             this.Controls.Add(this.customerDatePicker);
@@ -240,7 +263,7 @@ namespace FlightManager
             this.Controls.Add(this.customerEmail);
             this.Controls.Add(this.customerPhoneNr);
             this.Controls.Add(this.customerFullName);
-            this.Controls.Add(this.label7);
+            this.Controls.Add(this.BookingFormTitle);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -263,7 +286,7 @@ namespace FlightManager
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label BookingFormTitle;
         private System.Windows.Forms.TextBox customerFullName;
         private System.Windows.Forms.TextBox customerPhoneNr;
         private System.Windows.Forms.TextBox customerEmail;
@@ -276,5 +299,7 @@ namespace FlightManager
         private System.Windows.Forms.DateTimePicker customerDatePicker;
         private System.Windows.Forms.Button bookButton;
         private System.Windows.Forms.TextBox luggageNr;
+        private System.Windows.Forms.CheckBox airportTransferCheckbox;
+        private System.Windows.Forms.Label airportTransferLabel;
     }
 }

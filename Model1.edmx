@@ -33,6 +33,7 @@
           <Property Name="DocumentNr" Type="nvarchar" MaxLength="50" />
           <Property Name="Username" Type="nvarchar" MaxLength="50" />
           <Property Name="Password" Type="nvarchar" MaxLength="50" />
+          <Property Name="VIP" Type="bit" />
         </EntityType>
         <EntityContainer Name="databaseModelStoreContainer">
           <EntitySet Name="Flight_details_db" EntityType="Self.Flight_details_db" Schema="dbo" store:Type="Tables" />
@@ -59,6 +60,7 @@
           <Property Name="DocumentNr" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Username" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="VIP" Type="Boolean" />
         </EntityType>
         <EntityType Name="Flight_details_db">
           <Key>
@@ -84,6 +86,7 @@
           <EntitySetMapping Name="Personal_Info">
             <EntityTypeMapping TypeName="databaseModel.Personal_Info">
               <MappingFragment StoreEntitySet="Personal_Info">
+                <ScalarProperty Name="VIP" ColumnName="VIP" />
                 <ScalarProperty Name="Password" ColumnName="Password" />
                 <ScalarProperty Name="Username" ColumnName="Username" />
                 <ScalarProperty Name="DocumentNr" ColumnName="DocumentNr" />
