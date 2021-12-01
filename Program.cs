@@ -9,6 +9,9 @@ namespace FlightManager
     //TODO: - finish diagrams
     //      - admin dashboard
     //      - save bookings
+    //      - fix closing
+    //      - admin: should be able to add users, similar window as bookflight
+    //          with username + password
 
     public static class Globals
     {

@@ -57,7 +57,15 @@ namespace FlightManager
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            int id = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells[0].Value);
+            int id;
+            try
+            {
+                id = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells[0].Value);
+            }
+            catch
+            {
+                return;
+            }
 
             Globals.FlightID = id;
 
