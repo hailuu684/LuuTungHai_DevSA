@@ -13,10 +13,14 @@ namespace FlightManager
     public partial class FlightSearch : Form
     {
         databaseEntities db;
+
+        LoginForm loginWindow;
         
-        public FlightSearch()
+        public FlightSearch(LoginForm startWindow)
         {
             InitializeComponent();
+
+            loginWindow = startWindow;
 
             db = DataBaseSingleton.GetDataBase();
 
@@ -58,6 +62,7 @@ namespace FlightManager
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int id;
+
             try
             {
                 id = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells[0].Value);
@@ -71,6 +76,12 @@ namespace FlightManager
 
             var myForm = new BookingForm();
             myForm.Show();
+        }
+
+        private void exitButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            loginWindow.Show();
         }
     }
 }

@@ -93,6 +93,7 @@ namespace FlightManager
             this.Controls.Add(this.label1);
             this.Name = "LoginForm";
             this.Text = "Login";
+            this.VisibleChanged += new System.EventHandler(this.LoginForm_VisibleChanged);
             this.ResumeLayout(false);
             this.PerformLayout();
 

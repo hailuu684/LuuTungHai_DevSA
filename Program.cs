@@ -9,7 +9,7 @@ namespace FlightManager
     //TODO: - finish diagrams
     //      - admin dashboard
     //      - save bookings
-    //      - fix closing
+    //      - fix closing (done for users, not admin)
     //      - admin: should be able to add users, similar window as bookflight
     //          with username + password
 

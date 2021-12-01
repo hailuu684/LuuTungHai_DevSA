@@ -35,6 +35,7 @@ namespace FlightManager
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
+            this.exitButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -95,11 +96,22 @@ namespace FlightManager
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // exitButton
+            // 
+            this.exitButton.Location = new System.Drawing.Point(1268, 89);
+            this.exitButton.Name = "exitButton";
+            this.exitButton.Size = new System.Drawing.Size(147, 40);
+            this.exitButton.TabIndex = 6;
+            this.exitButton.Text = "Log out";
+            this.exitButton.UseVisualStyleBackColor = true;
+            this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
+            // 
             // FlightSearch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1427, 565);
+            this.Controls.Add(this.exitButton);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label2);
@@ -122,5 +134,6 @@ namespace FlightManager
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button exitButton;
     }
 }

@@ -38,7 +38,7 @@ namespace FlightManager
                         if (!isAdmin)
                         {
                             // TODO: add some dashboard with buttons for different things
-                            var myForm = new FlightSearch();
+                            var myForm = new FlightSearch(this);
                             myForm.Show();
                             this.Hide();
                         }
@@ -77,6 +77,15 @@ namespace FlightManager
             if (e.KeyCode == Keys.Enter)
             {
                 button1_Click(this, new EventArgs());
+            }
+        }
+
+        private void LoginForm_VisibleChanged(object sender, EventArgs e)
+        {
+            if (this.Visible)
+            {
+                usrtxt.Text = "";
+                usrpwtxt.Text = "";
             }
         }
     }
