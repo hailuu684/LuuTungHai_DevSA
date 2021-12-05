@@ -36,7 +36,9 @@ namespace FlightManager
             flight_db.ArrivalDateTime = (DateTime)arrivalTimeSelection.Value;
             flight_db.StandardPrice = Convert.ToDouble(priceTextbox.Text);
             flight_db.TotalCapacity = Convert.ToInt32(totalCapacityTextbox.Text);
-            
+            flight_db.AvailableSeats = flight_db.TotalCapacity;
+            flight_db.FlightDuration = (flight_db.ArrivalDateTime - flight_db.DepartureDateTime);
+
             db.Flight_details_db.Add(flight_db);
             db.SaveChanges();
             MessageBox.Show("Added flight information successfully");

@@ -47,6 +47,7 @@ namespace FlightManager
                 dataGridView1.DataSource = db.Flight_details_db.Where(
                     a => a.DepartureAirport.Equals(sourceCombo.Text) &&
                     a.ArrivalAirport.Equals(destinationCombo.Text)).ToList();
+                dataGridView1.Refresh();
 
                 dataGridView1.Columns[0].Visible = false;
                 dataGridView1.Columns[7].Visible = false;
