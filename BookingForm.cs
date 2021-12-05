@@ -52,36 +52,6 @@ namespace FlightManager
 
         }
 
-        private void customerFullName_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void customerPhoneNr_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void customerDatePicker_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void customerEmail_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void customerSex_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void customerDocNr_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void button2_Click(object sender, EventArgs e)
         {
             int flightId = Globals.FlightID;

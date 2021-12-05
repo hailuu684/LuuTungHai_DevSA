@@ -12,7 +12,7 @@ namespace FlightManager
     //      - fix closing (done for users, not admin)
     //      - admin: should be able to add users, similar window as bookflight
     //          with username + password
-
+    //      - remove duplicates from source/destination list
     public static class Globals
     {
         public static int PersonalID;

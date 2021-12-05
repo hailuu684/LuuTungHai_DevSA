@@ -131,7 +131,6 @@ namespace FlightManager
             this.customerFullName.Name = "customerFullName";
             this.customerFullName.Size = new System.Drawing.Size(279, 29);
             this.customerFullName.TabIndex = 7;
-            this.customerFullName.TextChanged += new System.EventHandler(this.customerFullName_TextChanged);
             // 
             // customerPhoneNr
             // 
@@ -139,7 +138,6 @@ namespace FlightManager
             this.customerPhoneNr.Name = "customerPhoneNr";
             this.customerPhoneNr.Size = new System.Drawing.Size(279, 29);
             this.customerPhoneNr.TabIndex = 9;
-            this.customerPhoneNr.TextChanged += new System.EventHandler(this.customerPhoneNr_TextChanged);
             // 
             // customerEmail
             // 
@@ -147,7 +145,6 @@ namespace FlightManager
             this.customerEmail.Name = "customerEmail";
             this.customerEmail.Size = new System.Drawing.Size(279, 29);
             this.customerEmail.TabIndex = 10;
-            this.customerEmail.TextChanged += new System.EventHandler(this.customerEmail_TextChanged);
             // 
             // customerSex
             // 
@@ -155,7 +152,6 @@ namespace FlightManager
             this.customerSex.Name = "customerSex";
             this.customerSex.Size = new System.Drawing.Size(279, 29);
             this.customerSex.TabIndex = 11;
-            this.customerSex.TextChanged += new System.EventHandler(this.customerSex_TextChanged);
             // 
             // customerDocNr
             // 
@@ -163,7 +159,6 @@ namespace FlightManager
             this.customerDocNr.Name = "customerDocNr";
             this.customerDocNr.Size = new System.Drawing.Size(279, 29);
             this.customerDocNr.TabIndex = 12;
-            this.customerDocNr.TextChanged += new System.EventHandler(this.customerDocNr_TextChanged);
             // 
             // label8
             // 
@@ -209,7 +204,6 @@ namespace FlightManager
             this.customerDatePicker.Name = "customerDatePicker";
             this.customerDatePicker.Size = new System.Drawing.Size(279, 29);
             this.customerDatePicker.TabIndex = 19;
-            this.customerDatePicker.ValueChanged += new System.EventHandler(this.customerDatePicker_ValueChanged);
             // 
             // bookButton
             // 
