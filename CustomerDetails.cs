@@ -13,68 +13,41 @@ namespace FlightManager
     public partial class CustomerDetails : Form
     {
         databaseEntities db;
-        static int id = 0;
 
-        public CustomerDetails(int ? Id)
+        public CustomerDetails()
         {
             InitializeComponent();
-            if (Id != null)
-            {
-                CustomerDetailsSaveButton.Visible = false;
 
-                db = new databaseEntities();
-                Personal_Info customer = db.Personal_Info.Where(a => a.Id == Id).FirstOrDefault();
-                id = customer.Id;
-                
-                customerFullName.Text = customer.FullName;
-                customerDatePicker.Value = (DateTime) customer.DateOfBirth;
-                customerSex.Text = customer.Sex;
-                customerDocNr.Text = customer.DocumentNr;
-                customerEmail.Text = customer.Email;
-                customerPhoneNr.Text = customer.PhoneNr;
-            }
-            else
-            {
-                customerUpdateButton.Visible = false;
-            }
+            db = DataBaseSingleton.GetDataBase();
         }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void CustomerDetailsSaveButton_Click(object sender, EventArgs e)
         {
-            databaseEntities db = new databaseEntities();
+            if (customerPassword.Text != customerPasswordConfirmation.Text)
+            {
+                MessageBox.Show("Password is not the same");
+                return;
+            }
+
+            int newId = db.Personal_Info.ToList().Count();
+
             Personal_Info customers = new Personal_Info
             {
+                Id = newId,
                 FullName = customerFullName.Text,
                 DateOfBirth = customerDatePicker.Value,
                 Sex = customerSex.Text,
                 DocumentNr = customerDocNr.Text,
                 Email = customerEmail.Text,
-                PhoneNr = customerPhoneNr.Text
+                PhoneNr = customerPhoneNr.Text,
+                Username = customerUsername.Text,
+                Password = customerPassword.Text,
+                VIP = vipCheckbox.Checked
             };
+
             db.Personal_Info.Add(customers);
             db.SaveChanges();
             MessageBox.Show("Info added");
-        }
 
-        private void customerUpdateButton_Click(object sender, EventArgs e)
-        {
-            db = new databaseEntities();
-            Personal_Info customer = db.Personal_Info.Where(a => a.Id == id).FirstOrDefault();
-
-            customer.FullName = customerFullName.Text;
-            customer.DateOfBirth = customerDatePicker.Value;
-            customer.Sex = customerSex.Text;
-            customer.DocumentNr = customerDocNr.Text;
-            customer.Email = customerEmail.Text;
-            customer.PhoneNr = customerPhoneNr.Text;
-            db.SaveChanges();
-            
-            MessageBox.Show("Updated successfully");
             this.Close();
         }
     }

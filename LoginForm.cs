@@ -10,18 +10,19 @@ using System.Windows.Forms;
 
 namespace FlightManager
 {
-    public partial class Form1 : Form
+    public partial class LoginForm : Form
     {
-        public Form1()
+        public LoginForm()
         {
             InitializeComponent();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            databaseEntities db = new databaseEntities();
+            databaseEntities db = DataBaseSingleton.GetDataBase();
+            
             bool isAdmin = false;
-
+            
             if (usrtxt.Text != string.Empty && usrpwtxt.Text != string.Empty)
             {
                 var user = db.Personal_Info.Where(a => a.Username.Equals(usrtxt.Text)).SingleOrDefault();
@@ -32,24 +33,22 @@ namespace FlightManager
 
                     if (user.Password.Equals(usrpwtxt.Text))
                     {
-                        MessageBox.Show("Password is correct");
                         Globals.PersonalID = user.Id;
 
                         if (!isAdmin)
                         {
-                            // TODO: add some dashboard with buttons for different things
-                            var myForm = new FlightSearch();
+                            var myForm = new FlightSearch(this);
                             myForm.Show();
                             this.Hide();
                         }
                         else
                         {
                             // TODO: add some dashboard with buttons for different things
-                            var myForm = new FlightInfo();
+                            var myForm = new AdminDashboard(this);
+                            //var myForm = new FlightInfo();
                             myForm.Show();
                             this.Hide();
                         }
-                        
                     }
                     else
                     {
@@ -70,6 +69,23 @@ namespace FlightManager
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void usrpwtxt_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                button1_Click(this, new EventArgs());
+            }
+        }
+
+        private void LoginForm_VisibleChanged(object sender, EventArgs e)
+        {
+            if (this.Visible)
+            {
+                usrtxt.Text = "";
+                usrpwtxt.Text = "";
+            }
         }
     }
 }

@@ -17,17 +17,13 @@ namespace FlightManager
         public FlightInfo()
         {
             InitializeComponent();
-            db = new databaseEntities();
-        }
-
-        private void label8_Click(object sender, EventArgs e)
-        {
-
+            db = DataBaseSingleton.GetDataBase();
         }
 
         private void addFlightButton_Click(object sender, EventArgs e)
         {
             Flight_details_db flight_db = new Flight_details_db();
+
             flight_db.FlightNumber = flightNumberTextbox.Text;
             flight_db.DepartureAirport = departureAirportTextbox.Text;
             flight_db.ArrivalAirport = destinationAirportTextbox.Text;
@@ -35,7 +31,9 @@ namespace FlightManager
             flight_db.ArrivalDateTime = (DateTime)arrivalTimeSelection.Value;
             flight_db.StandardPrice = Convert.ToDouble(priceTextbox.Text);
             flight_db.TotalCapacity = Convert.ToInt32(totalCapacityTextbox.Text);
-            
+            flight_db.AvailableSeats = flight_db.TotalCapacity;
+            flight_db.FlightDuration = new TimeSpan(0, 1, 25, 0, 0); //(flight_db.ArrivalDateTime - flight_db.DepartureDateTime);
+
             db.Flight_details_db.Add(flight_db);
             db.SaveChanges();
             MessageBox.Show("Added flight information successfully");

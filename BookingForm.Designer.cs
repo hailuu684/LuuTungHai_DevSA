@@ -29,6 +29,7 @@ namespace FlightManager
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BookingForm));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -47,9 +48,21 @@ namespace FlightManager
             this.priceBox = new System.Windows.Forms.TextBox();
             this.customerDatePicker = new System.Windows.Forms.DateTimePicker();
             this.bookButton = new System.Windows.Forms.Button();
-            this.luggageNr = new System.Windows.Forms.TextBox();
+            this.smallLuggageNr = new System.Windows.Forms.TextBox();
             this.airportTransferCheckbox = new System.Windows.Forms.CheckBox();
             this.airportTransferLabel = new System.Windows.Forms.Label();
+            this.vipPicture = new System.Windows.Forms.PictureBox();
+            this.mediumLuggageNr = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.largeLuggageNr = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.mealLabel = new System.Windows.Forms.Label();
+            this.mealTextbox = new System.Windows.Forms.TextBox();
+            this.drinkTextbox = new System.Windows.Forms.TextBox();
+            this.drinkLabel = new System.Windows.Forms.Label();
+            this.mealCheckbox = new System.Windows.Forms.CheckBox();
+            this.drinkCheckbox = new System.Windows.Forms.CheckBox();
+            ((System.ComponentModel.ISupportInitialize)(this.vipPicture)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -128,7 +141,6 @@ namespace FlightManager
             this.customerFullName.Name = "customerFullName";
             this.customerFullName.Size = new System.Drawing.Size(279, 29);
             this.customerFullName.TabIndex = 7;
-            this.customerFullName.TextChanged += new System.EventHandler(this.customerFullName_TextChanged);
             // 
             // customerPhoneNr
             // 
@@ -136,7 +148,6 @@ namespace FlightManager
             this.customerPhoneNr.Name = "customerPhoneNr";
             this.customerPhoneNr.Size = new System.Drawing.Size(279, 29);
             this.customerPhoneNr.TabIndex = 9;
-            this.customerPhoneNr.TextChanged += new System.EventHandler(this.customerPhoneNr_TextChanged);
             // 
             // customerEmail
             // 
@@ -144,7 +155,6 @@ namespace FlightManager
             this.customerEmail.Name = "customerEmail";
             this.customerEmail.Size = new System.Drawing.Size(279, 29);
             this.customerEmail.TabIndex = 10;
-            this.customerEmail.TextChanged += new System.EventHandler(this.customerEmail_TextChanged);
             // 
             // customerSex
             // 
@@ -152,7 +162,6 @@ namespace FlightManager
             this.customerSex.Name = "customerSex";
             this.customerSex.Size = new System.Drawing.Size(279, 29);
             this.customerSex.TabIndex = 11;
-            this.customerSex.TextChanged += new System.EventHandler(this.customerSex_TextChanged);
             // 
             // customerDocNr
             // 
@@ -160,21 +169,20 @@ namespace FlightManager
             this.customerDocNr.Name = "customerDocNr";
             this.customerDocNr.Size = new System.Drawing.Size(279, 29);
             this.customerDocNr.TabIndex = 12;
-            this.customerDocNr.TextChanged += new System.EventHandler(this.customerDocNr_TextChanged);
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(29, 365);
+            this.label8.Location = new System.Drawing.Point(29, 320);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(230, 30);
+            this.label8.Size = new System.Drawing.Size(175, 60);
             this.label8.TabIndex = 13;
-            this.label8.Text = "Number of luggage";
+            this.label8.Text = "Small luggage\r\n(10kg)";
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(187, 474);
+            this.button1.Location = new System.Drawing.Point(192, 582);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(193, 40);
             this.button1.TabIndex = 15;
@@ -186,7 +194,7 @@ namespace FlightManager
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(129, 550);
+            this.label9.Location = new System.Drawing.Point(129, 646);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(80, 32);
             this.label9.TabIndex = 16;
@@ -195,7 +203,7 @@ namespace FlightManager
             // priceBox
             // 
             this.priceBox.Enabled = false;
-            this.priceBox.Location = new System.Drawing.Point(266, 550);
+            this.priceBox.Location = new System.Drawing.Point(266, 646);
             this.priceBox.Name = "priceBox";
             this.priceBox.Size = new System.Drawing.Size(180, 29);
             this.priceBox.TabIndex = 18;
@@ -206,11 +214,10 @@ namespace FlightManager
             this.customerDatePicker.Name = "customerDatePicker";
             this.customerDatePicker.Size = new System.Drawing.Size(279, 29);
             this.customerDatePicker.TabIndex = 19;
-            this.customerDatePicker.ValueChanged += new System.EventHandler(this.customerDatePicker_ValueChanged);
             // 
             // bookButton
             // 
-            this.bookButton.Location = new System.Drawing.Point(177, 644);
+            this.bookButton.Location = new System.Drawing.Point(177, 740);
             this.bookButton.Name = "bookButton";
             this.bookButton.Size = new System.Drawing.Size(255, 54);
             this.bookButton.TabIndex = 20;
@@ -218,17 +225,18 @@ namespace FlightManager
             this.bookButton.UseVisualStyleBackColor = true;
             this.bookButton.Click += new System.EventHandler(this.button2_Click);
             // 
-            // luggageNr
+            // smallLuggageNr
             // 
-            this.luggageNr.Location = new System.Drawing.Point(293, 368);
-            this.luggageNr.Name = "luggageNr";
-            this.luggageNr.Size = new System.Drawing.Size(139, 29);
-            this.luggageNr.TabIndex = 21;
+            this.smallLuggageNr.Location = new System.Drawing.Point(34, 386);
+            this.smallLuggageNr.Name = "smallLuggageNr";
+            this.smallLuggageNr.Size = new System.Drawing.Size(170, 29);
+            this.smallLuggageNr.TabIndex = 21;
+            this.smallLuggageNr.Text = "0";
             // 
             // airportTransferCheckbox
             // 
             this.airportTransferCheckbox.AutoSize = true;
-            this.airportTransferCheckbox.Location = new System.Drawing.Point(293, 424);
+            this.airportTransferCheckbox.Location = new System.Drawing.Point(294, 442);
             this.airportTransferCheckbox.Name = "airportTransferCheckbox";
             this.airportTransferCheckbox.Size = new System.Drawing.Size(22, 21);
             this.airportTransferCheckbox.TabIndex = 22;
@@ -238,20 +246,131 @@ namespace FlightManager
             // 
             this.airportTransferLabel.AutoSize = true;
             this.airportTransferLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.airportTransferLabel.Location = new System.Drawing.Point(29, 415);
+            this.airportTransferLabel.Location = new System.Drawing.Point(30, 433);
             this.airportTransferLabel.Name = "airportTransferLabel";
             this.airportTransferLabel.Size = new System.Drawing.Size(183, 30);
             this.airportTransferLabel.TabIndex = 23;
             this.airportTransferLabel.Text = "Airport transfer";
             // 
+            // vipPicture
+            // 
+            this.vipPicture.Image = ((System.Drawing.Image)(resources.GetObject("vipPicture.Image")));
+            this.vipPicture.Location = new System.Drawing.Point(529, 756);
+            this.vipPicture.Name = "vipPicture";
+            this.vipPicture.Size = new System.Drawing.Size(80, 59);
+            this.vipPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.vipPicture.TabIndex = 24;
+            this.vipPicture.TabStop = false;
+            // 
+            // mediumLuggageNr
+            // 
+            this.mediumLuggageNr.Location = new System.Drawing.Point(222, 386);
+            this.mediumLuggageNr.Name = "mediumLuggageNr";
+            this.mediumLuggageNr.Size = new System.Drawing.Size(197, 29);
+            this.mediumLuggageNr.TabIndex = 26;
+            this.mediumLuggageNr.Text = "0";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(217, 320);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(202, 60);
+            this.label7.TabIndex = 25;
+            this.label7.Text = "Medium luggage\r\n(15kg)";
+            // 
+            // largeLuggageNr
+            // 
+            this.largeLuggageNr.Location = new System.Drawing.Point(439, 386);
+            this.largeLuggageNr.Name = "largeLuggageNr";
+            this.largeLuggageNr.Size = new System.Drawing.Size(170, 29);
+            this.largeLuggageNr.TabIndex = 28;
+            this.largeLuggageNr.Text = "0";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(434, 320);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(175, 60);
+            this.label10.TabIndex = 27;
+            this.label10.Text = "Large luggage\r\n(30kg)";
+            // 
+            // mealLabel
+            // 
+            this.mealLabel.AutoSize = true;
+            this.mealLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mealLabel.Location = new System.Drawing.Point(30, 481);
+            this.mealLabel.Name = "mealLabel";
+            this.mealLabel.Size = new System.Drawing.Size(69, 30);
+            this.mealLabel.TabIndex = 30;
+            this.mealLabel.Text = "Meal";
+            // 
+            // mealTextbox
+            // 
+            this.mealTextbox.Location = new System.Drawing.Point(293, 484);
+            this.mealTextbox.Name = "mealTextbox";
+            this.mealTextbox.Size = new System.Drawing.Size(279, 29);
+            this.mealTextbox.TabIndex = 31;
+            // 
+            // drinkTextbox
+            // 
+            this.drinkTextbox.Location = new System.Drawing.Point(293, 536);
+            this.drinkTextbox.Name = "drinkTextbox";
+            this.drinkTextbox.Size = new System.Drawing.Size(279, 29);
+            this.drinkTextbox.TabIndex = 33;
+            // 
+            // drinkLabel
+            // 
+            this.drinkLabel.AutoSize = true;
+            this.drinkLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.drinkLabel.Location = new System.Drawing.Point(30, 533);
+            this.drinkLabel.Name = "drinkLabel";
+            this.drinkLabel.Size = new System.Drawing.Size(74, 30);
+            this.drinkLabel.TabIndex = 32;
+            this.drinkLabel.Text = "Drink";
+            // 
+            // mealCheckbox
+            // 
+            this.mealCheckbox.AutoSize = true;
+            this.mealCheckbox.Location = new System.Drawing.Point(222, 490);
+            this.mealCheckbox.Name = "mealCheckbox";
+            this.mealCheckbox.Size = new System.Drawing.Size(22, 21);
+            this.mealCheckbox.TabIndex = 34;
+            this.mealCheckbox.UseVisualStyleBackColor = true;
+            this.mealCheckbox.CheckedChanged += new System.EventHandler(this.mealCheckbox_CheckedChanged);
+            // 
+            // drinkCheckbox
+            // 
+            this.drinkCheckbox.AutoSize = true;
+            this.drinkCheckbox.Location = new System.Drawing.Point(222, 544);
+            this.drinkCheckbox.Name = "drinkCheckbox";
+            this.drinkCheckbox.Size = new System.Drawing.Size(22, 21);
+            this.drinkCheckbox.TabIndex = 35;
+            this.drinkCheckbox.UseVisualStyleBackColor = true;
+            this.drinkCheckbox.CheckedChanged += new System.EventHandler(this.drinkCheckbox_CheckedChanged);
+            // 
             // BookingForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(621, 731);
+            this.ClientSize = new System.Drawing.Size(621, 824);
+            this.Controls.Add(this.drinkCheckbox);
+            this.Controls.Add(this.mealCheckbox);
+            this.Controls.Add(this.drinkTextbox);
+            this.Controls.Add(this.drinkLabel);
+            this.Controls.Add(this.mealTextbox);
+            this.Controls.Add(this.mealLabel);
+            this.Controls.Add(this.largeLuggageNr);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.mediumLuggageNr);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.vipPicture);
             this.Controls.Add(this.airportTransferLabel);
             this.Controls.Add(this.airportTransferCheckbox);
-            this.Controls.Add(this.luggageNr);
+            this.Controls.Add(this.smallLuggageNr);
             this.Controls.Add(this.bookButton);
             this.Controls.Add(this.customerDatePicker);
             this.Controls.Add(this.priceBox);
@@ -271,8 +390,9 @@ namespace FlightManager
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "BookingForm";
-            this.Text = "BookingForm";
+            this.Text = "Booking";
             this.Load += new System.EventHandler(this.BookingForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.vipPicture)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -298,8 +418,19 @@ namespace FlightManager
         private System.Windows.Forms.TextBox priceBox;
         private System.Windows.Forms.DateTimePicker customerDatePicker;
         private System.Windows.Forms.Button bookButton;
-        private System.Windows.Forms.TextBox luggageNr;
+        private System.Windows.Forms.TextBox smallLuggageNr;
         private System.Windows.Forms.CheckBox airportTransferCheckbox;
         private System.Windows.Forms.Label airportTransferLabel;
+        private System.Windows.Forms.PictureBox vipPicture;
+        private System.Windows.Forms.TextBox mediumLuggageNr;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox largeLuggageNr;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label mealLabel;
+        private System.Windows.Forms.TextBox mealTextbox;
+        private System.Windows.Forms.TextBox drinkTextbox;
+        private System.Windows.Forms.Label drinkLabel;
+        private System.Windows.Forms.CheckBox mealCheckbox;
+        private System.Windows.Forms.CheckBox drinkCheckbox;
     }
 }

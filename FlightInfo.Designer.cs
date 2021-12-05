@@ -161,7 +161,6 @@ namespace FlightManager
             this.label8.Size = new System.Drawing.Size(171, 30);
             this.label8.TabIndex = 12;
             this.label8.Text = "Total capacity";
-            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // departureTimeSelection
             // 

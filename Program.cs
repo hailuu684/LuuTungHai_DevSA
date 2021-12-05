@@ -6,10 +6,30 @@ using System.Windows.Forms;
 
 namespace FlightManager
 {
+    //TODOs:
+    //      - remove duplicates from source/destination list
+    //      - fix flight duration in adding flights
+
     public static class Globals
     {
         public static int PersonalID;
         public static int FlightID;
+    }
+
+    public class DataBaseSingleton
+    {
+        private static databaseEntities db;
+
+        private DataBaseSingleton()
+        { }
+
+        public static databaseEntities GetDataBase()
+        {
+            if (db == null)
+                db = new databaseEntities();
+
+            return db;
+        }
     }
 
     static class Program
@@ -22,7 +42,7 @@ namespace FlightManager
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new LoginForm());
         }
     }
 }

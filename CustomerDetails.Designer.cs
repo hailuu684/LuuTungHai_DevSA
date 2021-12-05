@@ -43,7 +43,14 @@ namespace FlightManager
             this.customerPhoneNr = new System.Windows.Forms.TextBox();
             this.customerDatePicker = new System.Windows.Forms.DateTimePicker();
             this.CustomerDetailsSaveButton = new System.Windows.Forms.Button();
-            this.customerUpdateButton = new System.Windows.Forms.Button();
+            this.customerUsername = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.customerPassword = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.customerPasswordConfirmation = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.vipCheckbox = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // customerDetailsLabel
@@ -52,9 +59,9 @@ namespace FlightManager
             this.customerDetailsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.customerDetailsLabel.Location = new System.Drawing.Point(64, 54);
             this.customerDetailsLabel.Name = "customerDetailsLabel";
-            this.customerDetailsLabel.Size = new System.Drawing.Size(285, 39);
+            this.customerDetailsLabel.Size = new System.Drawing.Size(342, 39);
             this.customerDetailsLabel.TabIndex = 0;
-            this.customerDetailsLabel.Text = "Customer Details";
+            this.customerDetailsLabel.Text = "Add customer details";
             // 
             // label1
             // 
@@ -65,7 +72,6 @@ namespace FlightManager
             this.label1.Size = new System.Drawing.Size(126, 30);
             this.label1.TabIndex = 1;
             this.label1.Text = "Full name";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -101,7 +107,7 @@ namespace FlightManager
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(66, 417);
+            this.label5.Location = new System.Drawing.Point(66, 424);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(180, 30);
             this.label5.TabIndex = 5;
@@ -147,7 +153,7 @@ namespace FlightManager
             // 
             // customerPhoneNr
             // 
-            this.customerPhoneNr.Location = new System.Drawing.Point(354, 420);
+            this.customerPhoneNr.Location = new System.Drawing.Point(354, 427);
             this.customerPhoneNr.Name = "customerPhoneNr";
             this.customerPhoneNr.Size = new System.Drawing.Size(343, 29);
             this.customerPhoneNr.TabIndex = 12;
@@ -161,7 +167,7 @@ namespace FlightManager
             // 
             // CustomerDetailsSaveButton
             // 
-            this.CustomerDetailsSaveButton.Location = new System.Drawing.Point(198, 498);
+            this.CustomerDetailsSaveButton.Location = new System.Drawing.Point(277, 747);
             this.CustomerDetailsSaveButton.Name = "CustomerDetailsSaveButton";
             this.CustomerDetailsSaveButton.Size = new System.Drawing.Size(183, 45);
             this.CustomerDetailsSaveButton.TabIndex = 15;
@@ -169,22 +175,91 @@ namespace FlightManager
             this.CustomerDetailsSaveButton.UseVisualStyleBackColor = true;
             this.CustomerDetailsSaveButton.Click += new System.EventHandler(this.CustomerDetailsSaveButton_Click);
             // 
-            // customerUpdateButton
+            // customerUsername
             // 
-            this.customerUpdateButton.Location = new System.Drawing.Point(454, 498);
-            this.customerUpdateButton.Name = "customerUpdateButton";
-            this.customerUpdateButton.Size = new System.Drawing.Size(182, 45);
-            this.customerUpdateButton.TabIndex = 16;
-            this.customerUpdateButton.Text = "Update";
-            this.customerUpdateButton.UseVisualStyleBackColor = true;
-            this.customerUpdateButton.Click += new System.EventHandler(this.customerUpdateButton_Click);
+            this.customerUsername.Location = new System.Drawing.Point(354, 493);
+            this.customerUsername.Name = "customerUsername";
+            this.customerUsername.Size = new System.Drawing.Size(343, 29);
+            this.customerUsername.TabIndex = 17;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(66, 490);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(132, 30);
+            this.label7.TabIndex = 16;
+            this.label7.Text = "Username";
+            // 
+            // customerPassword
+            // 
+            this.customerPassword.Location = new System.Drawing.Point(354, 559);
+            this.customerPassword.Name = "customerPassword";
+            this.customerPassword.PasswordChar = '*';
+            this.customerPassword.Size = new System.Drawing.Size(343, 29);
+            this.customerPassword.TabIndex = 19;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(66, 556);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(126, 30);
+            this.label8.TabIndex = 18;
+            this.label8.Text = "Password";
+            // 
+            // customerPasswordConfirmation
+            // 
+            this.customerPasswordConfirmation.Location = new System.Drawing.Point(354, 617);
+            this.customerPasswordConfirmation.Name = "customerPasswordConfirmation";
+            this.customerPasswordConfirmation.PasswordChar = '*';
+            this.customerPasswordConfirmation.Size = new System.Drawing.Size(343, 29);
+            this.customerPasswordConfirmation.TabIndex = 21;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(66, 614);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(221, 30);
+            this.label9.TabIndex = 20;
+            this.label9.Text = "Confirm password";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(69, 679);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(79, 30);
+            this.label10.TabIndex = 22;
+            this.label10.Text = "Is VIP";
+            // 
+            // vipCheckbox
+            // 
+            this.vipCheckbox.AutoSize = true;
+            this.vipCheckbox.Location = new System.Drawing.Point(354, 679);
+            this.vipCheckbox.Name = "vipCheckbox";
+            this.vipCheckbox.Size = new System.Drawing.Size(22, 21);
+            this.vipCheckbox.TabIndex = 23;
+            this.vipCheckbox.UseVisualStyleBackColor = true;
             // 
             // CustomerDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(782, 604);
-            this.Controls.Add(this.customerUpdateButton);
+            this.ClientSize = new System.Drawing.Size(782, 813);
+            this.Controls.Add(this.vipCheckbox);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.customerPasswordConfirmation);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.customerPassword);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.customerUsername);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.CustomerDetailsSaveButton);
             this.Controls.Add(this.customerDatePicker);
             this.Controls.Add(this.customerPhoneNr);
@@ -200,7 +275,7 @@ namespace FlightManager
             this.Controls.Add(this.label1);
             this.Controls.Add(this.customerDetailsLabel);
             this.Name = "CustomerDetails";
-            this.Text = "CustomerDetails";
+            this.Text = "Customer details";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -222,6 +297,13 @@ namespace FlightManager
         private System.Windows.Forms.TextBox customerPhoneNr;
         private System.Windows.Forms.DateTimePicker customerDatePicker;
         private System.Windows.Forms.Button CustomerDetailsSaveButton;
-        private System.Windows.Forms.Button customerUpdateButton;
+        private System.Windows.Forms.TextBox customerUsername;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox customerPassword;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox customerPasswordConfirmation;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.CheckBox vipCheckbox;
     }
 }
