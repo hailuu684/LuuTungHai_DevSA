@@ -30,6 +30,14 @@ namespace FlightManager
                 airportTransferLabel.Visible = true;
                 airportTransferCheckbox.Visible = true;
                 vipPicture.Visible = true;
+                drinkCheckbox.Visible = true;
+                drinkLabel.Visible = true;
+                drinkTextbox.Visible = true;
+                mealCheckbox.Visible = true;
+                mealLabel.Visible = true;
+                mealTextbox.Visible = true;
+                mealTextbox.ReadOnly = true;
+                drinkTextbox.ReadOnly = true;
             }
             else
             {
@@ -37,6 +45,12 @@ namespace FlightManager
                 airportTransferLabel.Visible = false;
                 airportTransferCheckbox.Visible = false;
                 vipPicture.Visible = false;
+                drinkCheckbox.Visible = false;
+                drinkLabel.Visible = false;
+                drinkTextbox.Visible = false;
+                mealCheckbox.Visible = false;
+                mealLabel.Visible = false;
+                mealTextbox.Visible = false;
             }
             
             customerFullName.Text = customer.FullName;
@@ -112,7 +126,45 @@ namespace FlightManager
                                    nrOfSmallLuggage*10 +
                                    nrOfMediumLuggage*50 +
                                    nrOfLargeLuggage*100) * multiplier;
+
+            if (mealCheckbox.Checked)
+            {
+                currentPrice += 100;
+            }
+            if (drinkCheckbox.Checked)
+            {
+                currentPrice += 50;
+            }
+            if (airportTransferCheckbox.Checked)
+            {
+                currentPrice += 150;
+            }
+
             priceBox.Text = "$ " + Convert.ToString(currentPrice);
+        }
+
+        private void mealCheckbox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (mealCheckbox.Checked)
+            {
+                mealTextbox.ReadOnly = false;
+            }
+            else
+            {
+                mealTextbox.ReadOnly = true;
+            }
+        }
+
+        private void drinkCheckbox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (drinkCheckbox.Checked)
+            {
+                drinkTextbox.ReadOnly = false;
+            }
+            else
+            {
+                drinkTextbox.ReadOnly = true;
+            }
         }
     }
 }

@@ -22,15 +22,17 @@ namespace FlightManager
         }
         private void CustomerDetailsSaveButton_Click(object sender, EventArgs e)
         {
-            //databaseEntities db = new databaseEntities();
             if (customerPassword.Text != customerPasswordConfirmation.Text)
             {
                 MessageBox.Show("Password is not the same");
                 return;
             }
 
+            int newId = db.Personal_Info.ToList().Count();
+
             Personal_Info customers = new Personal_Info
             {
+                Id = newId,
                 FullName = customerFullName.Text,
                 DateOfBirth = customerDatePicker.Value,
                 Sex = customerSex.Text,
@@ -38,7 +40,8 @@ namespace FlightManager
                 Email = customerEmail.Text,
                 PhoneNr = customerPhoneNr.Text,
                 Username = customerUsername.Text,
-                Password = customerPassword.Text
+                Password = customerPassword.Text,
+                VIP = vipCheckbox.Checked
             };
 
             db.Personal_Info.Add(customers);

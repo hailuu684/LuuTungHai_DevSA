@@ -49,6 +49,8 @@ namespace FlightManager
             this.label8 = new System.Windows.Forms.Label();
             this.customerPasswordConfirmation = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.vipCheckbox = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // customerDetailsLabel
@@ -165,7 +167,7 @@ namespace FlightManager
             // 
             // CustomerDetailsSaveButton
             // 
-            this.CustomerDetailsSaveButton.Location = new System.Drawing.Point(273, 674);
+            this.CustomerDetailsSaveButton.Location = new System.Drawing.Point(277, 747);
             this.CustomerDetailsSaveButton.Name = "CustomerDetailsSaveButton";
             this.CustomerDetailsSaveButton.Size = new System.Drawing.Size(183, 45);
             this.CustomerDetailsSaveButton.TabIndex = 15;
@@ -175,7 +177,7 @@ namespace FlightManager
             // 
             // customerUsername
             // 
-            this.customerUsername.Location = new System.Drawing.Point(354, 491);
+            this.customerUsername.Location = new System.Drawing.Point(354, 493);
             this.customerUsername.Name = "customerUsername";
             this.customerUsername.Size = new System.Drawing.Size(343, 29);
             this.customerUsername.TabIndex = 17;
@@ -184,7 +186,7 @@ namespace FlightManager
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(66, 488);
+            this.label7.Location = new System.Drawing.Point(66, 490);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(132, 30);
             this.label7.TabIndex = 16;
@@ -192,7 +194,7 @@ namespace FlightManager
             // 
             // customerPassword
             // 
-            this.customerPassword.Location = new System.Drawing.Point(354, 557);
+            this.customerPassword.Location = new System.Drawing.Point(354, 559);
             this.customerPassword.Name = "customerPassword";
             this.customerPassword.PasswordChar = '*';
             this.customerPassword.Size = new System.Drawing.Size(343, 29);
@@ -202,7 +204,7 @@ namespace FlightManager
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(66, 554);
+            this.label8.Location = new System.Drawing.Point(66, 556);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(126, 30);
             this.label8.TabIndex = 18;
@@ -210,7 +212,7 @@ namespace FlightManager
             // 
             // customerPasswordConfirmation
             // 
-            this.customerPasswordConfirmation.Location = new System.Drawing.Point(354, 615);
+            this.customerPasswordConfirmation.Location = new System.Drawing.Point(354, 617);
             this.customerPasswordConfirmation.Name = "customerPasswordConfirmation";
             this.customerPasswordConfirmation.PasswordChar = '*';
             this.customerPasswordConfirmation.Size = new System.Drawing.Size(343, 29);
@@ -220,17 +222,38 @@ namespace FlightManager
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(66, 612);
+            this.label9.Location = new System.Drawing.Point(66, 614);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(221, 30);
             this.label9.TabIndex = 20;
             this.label9.Text = "Confirm password";
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(69, 679);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(79, 30);
+            this.label10.TabIndex = 22;
+            this.label10.Text = "Is VIP";
+            // 
+            // vipCheckbox
+            // 
+            this.vipCheckbox.AutoSize = true;
+            this.vipCheckbox.Location = new System.Drawing.Point(354, 679);
+            this.vipCheckbox.Name = "vipCheckbox";
+            this.vipCheckbox.Size = new System.Drawing.Size(22, 21);
+            this.vipCheckbox.TabIndex = 23;
+            this.vipCheckbox.UseVisualStyleBackColor = true;
+            // 
             // CustomerDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(782, 731);
+            this.ClientSize = new System.Drawing.Size(782, 813);
+            this.Controls.Add(this.vipCheckbox);
+            this.Controls.Add(this.label10);
             this.Controls.Add(this.customerPasswordConfirmation);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.customerPassword);
@@ -280,5 +303,7 @@ namespace FlightManager
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox customerPasswordConfirmation;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.CheckBox vipCheckbox;
     }
 }

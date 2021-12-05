@@ -56,6 +56,12 @@ namespace FlightManager
             this.label7 = new System.Windows.Forms.Label();
             this.largeLuggageNr = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
+            this.mealLabel = new System.Windows.Forms.Label();
+            this.mealTextbox = new System.Windows.Forms.TextBox();
+            this.drinkTextbox = new System.Windows.Forms.TextBox();
+            this.drinkLabel = new System.Windows.Forms.Label();
+            this.mealCheckbox = new System.Windows.Forms.CheckBox();
+            this.drinkCheckbox = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.vipPicture)).BeginInit();
             this.SuspendLayout();
             // 
@@ -176,7 +182,7 @@ namespace FlightManager
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(192, 486);
+            this.button1.Location = new System.Drawing.Point(192, 582);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(193, 40);
             this.button1.TabIndex = 15;
@@ -188,7 +194,7 @@ namespace FlightManager
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(129, 550);
+            this.label9.Location = new System.Drawing.Point(129, 646);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(80, 32);
             this.label9.TabIndex = 16;
@@ -197,7 +203,7 @@ namespace FlightManager
             // priceBox
             // 
             this.priceBox.Enabled = false;
-            this.priceBox.Location = new System.Drawing.Point(266, 550);
+            this.priceBox.Location = new System.Drawing.Point(266, 646);
             this.priceBox.Name = "priceBox";
             this.priceBox.Size = new System.Drawing.Size(180, 29);
             this.priceBox.TabIndex = 18;
@@ -211,7 +217,7 @@ namespace FlightManager
             // 
             // bookButton
             // 
-            this.bookButton.Location = new System.Drawing.Point(177, 644);
+            this.bookButton.Location = new System.Drawing.Point(177, 740);
             this.bookButton.Name = "bookButton";
             this.bookButton.Size = new System.Drawing.Size(255, 54);
             this.bookButton.TabIndex = 20;
@@ -249,7 +255,7 @@ namespace FlightManager
             // vipPicture
             // 
             this.vipPicture.Image = ((System.Drawing.Image)(resources.GetObject("vipPicture.Image")));
-            this.vipPicture.Location = new System.Drawing.Point(529, 660);
+            this.vipPicture.Location = new System.Drawing.Point(529, 756);
             this.vipPicture.Name = "vipPicture";
             this.vipPicture.Size = new System.Drawing.Size(80, 59);
             this.vipPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -292,11 +298,71 @@ namespace FlightManager
             this.label10.TabIndex = 27;
             this.label10.Text = "Large luggage\r\n(30kg)";
             // 
+            // mealLabel
+            // 
+            this.mealLabel.AutoSize = true;
+            this.mealLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mealLabel.Location = new System.Drawing.Point(30, 481);
+            this.mealLabel.Name = "mealLabel";
+            this.mealLabel.Size = new System.Drawing.Size(69, 30);
+            this.mealLabel.TabIndex = 30;
+            this.mealLabel.Text = "Meal";
+            // 
+            // mealTextbox
+            // 
+            this.mealTextbox.Location = new System.Drawing.Point(293, 484);
+            this.mealTextbox.Name = "mealTextbox";
+            this.mealTextbox.Size = new System.Drawing.Size(279, 29);
+            this.mealTextbox.TabIndex = 31;
+            // 
+            // drinkTextbox
+            // 
+            this.drinkTextbox.Location = new System.Drawing.Point(293, 536);
+            this.drinkTextbox.Name = "drinkTextbox";
+            this.drinkTextbox.Size = new System.Drawing.Size(279, 29);
+            this.drinkTextbox.TabIndex = 33;
+            // 
+            // drinkLabel
+            // 
+            this.drinkLabel.AutoSize = true;
+            this.drinkLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.drinkLabel.Location = new System.Drawing.Point(30, 533);
+            this.drinkLabel.Name = "drinkLabel";
+            this.drinkLabel.Size = new System.Drawing.Size(74, 30);
+            this.drinkLabel.TabIndex = 32;
+            this.drinkLabel.Text = "Drink";
+            // 
+            // mealCheckbox
+            // 
+            this.mealCheckbox.AutoSize = true;
+            this.mealCheckbox.Location = new System.Drawing.Point(222, 490);
+            this.mealCheckbox.Name = "mealCheckbox";
+            this.mealCheckbox.Size = new System.Drawing.Size(22, 21);
+            this.mealCheckbox.TabIndex = 34;
+            this.mealCheckbox.UseVisualStyleBackColor = true;
+            this.mealCheckbox.CheckedChanged += new System.EventHandler(this.mealCheckbox_CheckedChanged);
+            // 
+            // drinkCheckbox
+            // 
+            this.drinkCheckbox.AutoSize = true;
+            this.drinkCheckbox.Location = new System.Drawing.Point(222, 544);
+            this.drinkCheckbox.Name = "drinkCheckbox";
+            this.drinkCheckbox.Size = new System.Drawing.Size(22, 21);
+            this.drinkCheckbox.TabIndex = 35;
+            this.drinkCheckbox.UseVisualStyleBackColor = true;
+            this.drinkCheckbox.CheckedChanged += new System.EventHandler(this.drinkCheckbox_CheckedChanged);
+            // 
             // BookingForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(621, 731);
+            this.ClientSize = new System.Drawing.Size(621, 824);
+            this.Controls.Add(this.drinkCheckbox);
+            this.Controls.Add(this.mealCheckbox);
+            this.Controls.Add(this.drinkTextbox);
+            this.Controls.Add(this.drinkLabel);
+            this.Controls.Add(this.mealTextbox);
+            this.Controls.Add(this.mealLabel);
             this.Controls.Add(this.largeLuggageNr);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.mediumLuggageNr);
@@ -360,5 +426,11 @@ namespace FlightManager
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox largeLuggageNr;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label mealLabel;
+        private System.Windows.Forms.TextBox mealTextbox;
+        private System.Windows.Forms.TextBox drinkTextbox;
+        private System.Windows.Forms.Label drinkLabel;
+        private System.Windows.Forms.CheckBox mealCheckbox;
+        private System.Windows.Forms.CheckBox drinkCheckbox;
     }
 }
