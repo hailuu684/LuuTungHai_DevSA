@@ -2,11 +2,8 @@
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="FlightManager.BookingForm" Collapsed="true">
     <Position X="6.5" Y="4.5" Width="2.75" />
-    <Members>
-      <Field Name="airportTransferCheckbox" Hidden="true" />
-    </Members>
     <TypeIdentifier>
-      <HashCode>IAIEBBAJACAQEBCAACCgAAACEABIYEAAAGAAAAgAQ0A=</HashCode>
+      <HashCode>MAIEAAAJACAQABCABACgAEBCEAAIAEgAAGAAAAgAQ0A=</HashCode>
       <FileName>BookingForm.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -20,21 +17,21 @@
   <Class Name="FlightManager.FlightInfo" Collapsed="true">
     <Position X="6.25" Y="4.25" Width="2" />
     <TypeIdentifier>
-      <HashCode>AAAAgAUEACARABAAAACAAAACAAAAQAAgAAAAQAAAACA=</HashCode>
+      <HashCode>AAAAgAEEACARABAAAACAAAACAAAAQAAgAAAAQAAAACA=</HashCode>
       <FileName>FlightInfo.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="FlightManager.FlightSearch" Collapsed="true">
     <Position X="6.25" Y="4.5" Width="2" />
     <TypeIdentifier>
-      <HashCode>AAACAACAACAUQBAAAACAAAACAAgIAAAAAEAAAAAAEAA=</HashCode>
+      <HashCode>AAICAACAACAUQBAAIACAAAACAAgIAAAAAEAAAAAAEAQ=</HashCode>
       <FileName>FlightSearch.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="FlightManager.LoginForm" Collapsed="true">
     <Position X="7.25" Y="4.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AgAAAAAAECAAABAAAADAAAASAAAIAAAAAEAAAAAAAAA=</HashCode>
+      <HashCode>AgAAAAABECAAABAAAADAAAASAAAIAAAAAEAAAAAAAAA=</HashCode>
       <FileName>LoginForm.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -71,13 +68,6 @@
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
       <FileName>Program.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="FlightManager.StoreCustomers" Collapsed="true">
-    <Position X="0.5" Y="6.25" Width="2" />
-    <TypeIdentifier>
-      <HashCode>AAAEAAAAACAEABAAAACAAAASAAgAAAAAEAAAAAAAAAA=</HashCode>
-      <FileName>StoreCustomers.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="FlightManager.Properties.Resources" Collapsed="true">

@@ -23,7 +23,8 @@ namespace FlightManager
 
         private void AddUserButton_Click(object sender, EventArgs e)
         {
-
+            var myForm = new CustomerDetails();
+            myForm.Show();
         }
 
         private void AddFlightButton_Click(object sender, EventArgs e)
