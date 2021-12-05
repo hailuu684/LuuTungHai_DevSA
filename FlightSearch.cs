@@ -29,7 +29,7 @@ namespace FlightManager
         }
         private void BindSource()
         {
-            var items = db.Flight_details_db. ToList();
+            var items = db.Flight_details_db.ToList();
             sourceCombo.DataSource = items;
             sourceCombo.DisplayMember = "DepartureAirport";
         }

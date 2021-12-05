@@ -70,10 +70,12 @@ namespace FlightManager
 
         private void button1_Click(object sender, EventArgs e)
         {
-            int nrOfLuggage;
+            int nrOfSmallLuggage, nrOfMediumLuggage, nrOfLargeLuggage;
             try
             {
-                nrOfLuggage = Convert.ToInt32(luggageNr.Text);
+                nrOfSmallLuggage = Convert.ToInt32(smallLuggageNr.Text);
+                nrOfMediumLuggage = Convert.ToInt32(mediumLuggageNr.Text);
+                nrOfLargeLuggage = Convert.ToInt32(largeLuggageNr.Text);
             }
             catch
             {
@@ -83,7 +85,7 @@ namespace FlightManager
 
             if (customer.VIP == false)
             {
-                if (nrOfLuggage > 3)
+                if (nrOfSmallLuggage+ nrOfMediumLuggage+ nrOfLargeLuggage > 3)
                 {
                     MessageBox.Show("Choose less luggage please");
                     return;
@@ -91,7 +93,7 @@ namespace FlightManager
             }
             else
             {
-                if (nrOfLuggage > 10)
+                if (nrOfSmallLuggage + nrOfMediumLuggage + nrOfLargeLuggage > 10)
                 {
                     MessageBox.Show("Choose less luggage please");
                     return;
@@ -106,7 +108,10 @@ namespace FlightManager
             if (customer.VIP == true)
                 multiplier = 0.8;
 
-            double currentPrice = (Convert.ToDouble(currentFlight.StandardPrice) + nrOfLuggage*100) * multiplier;
+            double currentPrice = (Convert.ToDouble(currentFlight.StandardPrice) +
+                                   nrOfSmallLuggage*10 +
+                                   nrOfMediumLuggage*50 +
+                                   nrOfLargeLuggage*100) * multiplier;
             priceBox.Text = "$ " + Convert.ToString(currentPrice);
         }
     }
