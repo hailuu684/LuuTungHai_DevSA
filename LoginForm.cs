@@ -37,7 +37,6 @@ namespace FlightManager
 
                         if (!isAdmin)
                         {
-                            // TODO: add some dashboard with buttons for different things
                             var myForm = new FlightSearch(this);
                             myForm.Show();
                             this.Hide();
@@ -45,11 +44,11 @@ namespace FlightManager
                         else
                         {
                             // TODO: add some dashboard with buttons for different things
-                            var myForm = new FlightInfo();
+                            var myForm = new AdminDashboard(this);
+                            //var myForm = new FlightInfo();
                             myForm.Show();
                             this.Hide();
                         }
-                        
                     }
                     else
                     {

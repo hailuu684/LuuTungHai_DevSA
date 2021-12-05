@@ -225,6 +225,7 @@ namespace FlightManager
             this.smallLuggageNr.Name = "smallLuggageNr";
             this.smallLuggageNr.Size = new System.Drawing.Size(170, 29);
             this.smallLuggageNr.TabIndex = 21;
+            this.smallLuggageNr.Text = "0";
             // 
             // airportTransferCheckbox
             // 
@@ -261,6 +262,7 @@ namespace FlightManager
             this.mediumLuggageNr.Name = "mediumLuggageNr";
             this.mediumLuggageNr.Size = new System.Drawing.Size(197, 29);
             this.mediumLuggageNr.TabIndex = 26;
+            this.mediumLuggageNr.Text = "0";
             // 
             // label7
             // 
@@ -278,6 +280,7 @@ namespace FlightManager
             this.largeLuggageNr.Name = "largeLuggageNr";
             this.largeLuggageNr.Size = new System.Drawing.Size(170, 29);
             this.largeLuggageNr.TabIndex = 28;
+            this.largeLuggageNr.Text = "0";
             // 
             // label10
             // 

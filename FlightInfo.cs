@@ -20,11 +20,6 @@ namespace FlightManager
             db = DataBaseSingleton.GetDataBase();
         }
 
-        private void label8_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void addFlightButton_Click(object sender, EventArgs e)
         {
             Flight_details_db flight_db = new Flight_details_db();

@@ -6,9 +6,9 @@ using System.Windows.Forms;
 
 namespace FlightManager
 {
-    //TODO: - finish diagrams
+    //TODOs:
+    //      - finish diagrams
     //      - admin dashboard
-    //      - save bookings
     //      - fix closing (done for users, not admin)
     //      - admin: should be able to add users, similar window as bookflight
     //          with username + password
