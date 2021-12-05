@@ -6,10 +6,6 @@ using System.Windows.Forms;
 
 namespace FlightManager
 {
-    //TODOs:
-    //      - remove duplicates from source/destination list
-    //      - fix flight duration in adding flights
-
     public static class Globals
     {
         public static int PersonalID;

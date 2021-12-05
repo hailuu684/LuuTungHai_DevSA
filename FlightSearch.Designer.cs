@@ -88,7 +88,7 @@ namespace FlightManager
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(645, 89);
+            this.button1.Location = new System.Drawing.Point(643, 94);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(147, 40);
             this.button1.TabIndex = 5;
@@ -98,7 +98,7 @@ namespace FlightManager
             // 
             // exitButton
             // 
-            this.exitButton.Location = new System.Drawing.Point(1268, 89);
+            this.exitButton.Location = new System.Drawing.Point(1268, 94);
             this.exitButton.Name = "exitButton";
             this.exitButton.Size = new System.Drawing.Size(147, 40);
             this.exitButton.TabIndex = 6;

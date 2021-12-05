@@ -182,7 +182,7 @@ namespace FlightManager
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(192, 582);
+            this.button1.Location = new System.Drawing.Point(192, 588);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(193, 40);
             this.button1.TabIndex = 15;
@@ -194,7 +194,7 @@ namespace FlightManager
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(129, 646);
+            this.label9.Location = new System.Drawing.Point(129, 652);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(80, 32);
             this.label9.TabIndex = 16;
@@ -203,7 +203,7 @@ namespace FlightManager
             // priceBox
             // 
             this.priceBox.Enabled = false;
-            this.priceBox.Location = new System.Drawing.Point(266, 646);
+            this.priceBox.Location = new System.Drawing.Point(266, 652);
             this.priceBox.Name = "priceBox";
             this.priceBox.Size = new System.Drawing.Size(180, 29);
             this.priceBox.TabIndex = 18;
@@ -227,7 +227,7 @@ namespace FlightManager
             // 
             // smallLuggageNr
             // 
-            this.smallLuggageNr.Location = new System.Drawing.Point(34, 386);
+            this.smallLuggageNr.Location = new System.Drawing.Point(34, 391);
             this.smallLuggageNr.Name = "smallLuggageNr";
             this.smallLuggageNr.Size = new System.Drawing.Size(170, 29);
             this.smallLuggageNr.TabIndex = 21;
@@ -264,7 +264,7 @@ namespace FlightManager
             // 
             // mediumLuggageNr
             // 
-            this.mediumLuggageNr.Location = new System.Drawing.Point(222, 386);
+            this.mediumLuggageNr.Location = new System.Drawing.Point(222, 391);
             this.mediumLuggageNr.Name = "mediumLuggageNr";
             this.mediumLuggageNr.Size = new System.Drawing.Size(197, 29);
             this.mediumLuggageNr.TabIndex = 26;
@@ -282,7 +282,7 @@ namespace FlightManager
             // 
             // largeLuggageNr
             // 
-            this.largeLuggageNr.Location = new System.Drawing.Point(439, 386);
+            this.largeLuggageNr.Location = new System.Drawing.Point(439, 391);
             this.largeLuggageNr.Name = "largeLuggageNr";
             this.largeLuggageNr.Size = new System.Drawing.Size(170, 29);
             this.largeLuggageNr.TabIndex = 28;
