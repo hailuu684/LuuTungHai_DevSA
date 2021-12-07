@@ -60,7 +60,7 @@ namespace FlightManager
             this.usrtxt.Name = "usrtxt";
             this.usrtxt.Size = new System.Drawing.Size(174, 29);
             this.usrtxt.TabIndex = 2;
-            this.usrtxt.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.usrtxt.KeyDown += new System.Windows.Forms.KeyEventHandler(this.usrtxt_KeyDown);
             // 
             // usrpwtxt
             // 

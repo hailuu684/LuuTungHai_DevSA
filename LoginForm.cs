@@ -43,9 +43,7 @@ namespace FlightManager
                         }
                         else
                         {
-                            // TODO: add some dashboard with buttons for different things
                             var myForm = new AdminDashboard(this);
-                            //var myForm = new FlightInfo();
                             myForm.Show();
                             this.Hide();
                         }
@@ -66,11 +64,6 @@ namespace FlightManager
             }
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void usrpwtxt_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
@@ -86,6 +79,11 @@ namespace FlightManager
                 usrtxt.Text = "";
                 usrpwtxt.Text = "";
             }
+        }
+
+        private void usrtxt_KeyDown(object sender, KeyEventArgs e)
+        {
+            usrpwtxt_KeyDown(sender, e);
         }
     }
 }

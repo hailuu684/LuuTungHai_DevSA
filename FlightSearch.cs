@@ -29,13 +29,17 @@ namespace FlightManager
         }
         private void BindSource()
         {
-            var items = db.Flight_details_db.ToList();
+            var items = db.Flight_details_db.ToList().
+                Select(a => a.DepartureAirport).Distinct().ToList();
+            items.Sort();
             sourceCombo.DataSource = items;
             sourceCombo.DisplayMember = "DepartureAirport";
         }
         private void BindDestination()
         {
-            var items = db.Flight_details_db.ToList();
+            var items = db.Flight_details_db.ToList().
+                Select(a => a.ArrivalAirport).Distinct().ToList();
+            items.Sort();
             destinationCombo.DataSource = items;
             destinationCombo.DisplayMember = "ArrivalAirport";
         }

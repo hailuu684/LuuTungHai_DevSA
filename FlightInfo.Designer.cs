@@ -42,9 +42,11 @@ namespace FlightManager
             this.priceTextbox = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.departureDateSelection = new System.Windows.Forms.DateTimePicker();
+            this.arrivalDateSelection = new System.Windows.Forms.DateTimePicker();
+            this.addFlightButton = new System.Windows.Forms.Button();
             this.departureTimeSelection = new System.Windows.Forms.DateTimePicker();
             this.arrivalTimeSelection = new System.Windows.Forms.DateTimePicker();
-            this.addFlightButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -162,19 +164,23 @@ namespace FlightManager
             this.label8.TabIndex = 12;
             this.label8.Text = "Total capacity";
             // 
-            // departureTimeSelection
+            // departureDateSelection
             // 
-            this.departureTimeSelection.Location = new System.Drawing.Point(319, 271);
-            this.departureTimeSelection.Name = "departureTimeSelection";
-            this.departureTimeSelection.Size = new System.Drawing.Size(313, 29);
-            this.departureTimeSelection.TabIndex = 13;
+            this.departureDateSelection.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.departureDateSelection.Location = new System.Drawing.Point(319, 271);
+            this.departureDateSelection.MinDate = new System.DateTime(2021, 1, 1, 0, 0, 0, 0);
+            this.departureDateSelection.Name = "departureDateSelection";
+            this.departureDateSelection.Size = new System.Drawing.Size(159, 29);
+            this.departureDateSelection.TabIndex = 13;
             // 
-            // arrivalTimeSelection
+            // arrivalDateSelection
             // 
-            this.arrivalTimeSelection.Location = new System.Drawing.Point(319, 320);
-            this.arrivalTimeSelection.Name = "arrivalTimeSelection";
-            this.arrivalTimeSelection.Size = new System.Drawing.Size(313, 29);
-            this.arrivalTimeSelection.TabIndex = 14;
+            this.arrivalDateSelection.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.arrivalDateSelection.Location = new System.Drawing.Point(319, 320);
+            this.arrivalDateSelection.MinDate = new System.DateTime(2021, 1, 1, 0, 0, 0, 0);
+            this.arrivalDateSelection.Name = "arrivalDateSelection";
+            this.arrivalDateSelection.Size = new System.Drawing.Size(159, 29);
+            this.arrivalDateSelection.TabIndex = 14;
             // 
             // addFlightButton
             // 
@@ -186,14 +192,32 @@ namespace FlightManager
             this.addFlightButton.UseVisualStyleBackColor = true;
             this.addFlightButton.Click += new System.EventHandler(this.addFlightButton_Click);
             // 
+            // departureTimeSelection
+            // 
+            this.departureTimeSelection.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.departureTimeSelection.Location = new System.Drawing.Point(484, 270);
+            this.departureTimeSelection.Name = "departureTimeSelection";
+            this.departureTimeSelection.Size = new System.Drawing.Size(148, 29);
+            this.departureTimeSelection.TabIndex = 16;
+            // 
+            // arrivalTimeSelection
+            // 
+            this.arrivalTimeSelection.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.arrivalTimeSelection.Location = new System.Drawing.Point(484, 320);
+            this.arrivalTimeSelection.Name = "arrivalTimeSelection";
+            this.arrivalTimeSelection.Size = new System.Drawing.Size(148, 29);
+            this.arrivalTimeSelection.TabIndex = 17;
+            // 
             // FlightInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(728, 586);
-            this.Controls.Add(this.addFlightButton);
             this.Controls.Add(this.arrivalTimeSelection);
             this.Controls.Add(this.departureTimeSelection);
+            this.Controls.Add(this.addFlightButton);
+            this.Controls.Add(this.arrivalDateSelection);
+            this.Controls.Add(this.departureDateSelection);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.priceTextbox);
@@ -229,8 +253,10 @@ namespace FlightManager
         private System.Windows.Forms.TextBox priceTextbox;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.DateTimePicker departureDateSelection;
+        private System.Windows.Forms.DateTimePicker arrivalDateSelection;
+        private System.Windows.Forms.Button addFlightButton;
         private System.Windows.Forms.DateTimePicker departureTimeSelection;
         private System.Windows.Forms.DateTimePicker arrivalTimeSelection;
-        private System.Windows.Forms.Button addFlightButton;
     }
 }
